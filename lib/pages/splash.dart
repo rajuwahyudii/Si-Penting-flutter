@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:stunting/pages/auth/login.dart';
 import 'package:stunting/pages/wrapper.dart';
 import 'package:stunting/theme/color.dart';
 import 'package:stunting/theme/font.dart';
@@ -25,7 +26,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void onDone() {
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
-        builder: (context) => const Wrapper(),
+        builder: (context) => const Login(),
       ),
     );
   }
