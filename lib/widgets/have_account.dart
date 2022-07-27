@@ -30,11 +30,7 @@ class HaveAccount extends StatelessWidget {
             ),
           ),
           TextButton(
-            onPressed: press != null
-                ? () {
-                    press();
-                  }
-                : null,
+            onPressed: press(),
             child: Text(
               fiture,
               style: GoogleFonts.poppins(
