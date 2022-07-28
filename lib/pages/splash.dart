@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:stunting/pages/admin/admin.dart';
 import 'package:stunting/pages/admin/artikel_admin.dart';
 import 'package:stunting/pages/menu.dart';
+import 'package:stunting/pages/quiz/quiz.dart';
+import 'package:stunting/pages/quiz/score.dart';
 import 'package:stunting/pages/quiz/start_quiz.dart';
 import 'package:stunting/theme/color.dart';
 import 'package:stunting/theme/font.dart';
@@ -28,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void onDone() {
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
-        builder: (context) => const StartQuiz(),
+        builder: (context) => Score(),
       ),
     );
   }
