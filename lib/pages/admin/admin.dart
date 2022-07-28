@@ -22,7 +22,9 @@ class _AdminPageState extends State<AdminPage> {
           icon: const Icon(
             Icons.arrow_back,
           ),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
         backgroundColor: backgroundColor,
         centerTitle: true,

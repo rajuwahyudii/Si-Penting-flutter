@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:stunting/pages/admin/admin.dart';
 import 'package:stunting/theme/color.dart';
 
 class Menu extends StatefulWidget {
@@ -19,10 +19,23 @@ class _MenuState extends State<Menu> {
     return Scaffold(
       backgroundColor: backgroundColor,
       appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(
+            Icons.logout_outlined,
+          ),
+          onPressed: () {},
+        ),
         backgroundColor: backgroundColor,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const AdminPage(),
+                ),
+              );
+            },
             icon: const Icon(
               Icons.admin_panel_settings,
               size: 30,
@@ -73,7 +86,7 @@ class _MenuState extends State<Menu> {
                 });
               },
               child: Container(
-                padding: const EdgeInsets.all(10),
+                padding: const EdgeInsets.fromLTRB(15, 10, 15, 10),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -104,7 +117,7 @@ class _MenuState extends State<Menu> {
                 });
               },
               child: Container(
-                padding: const EdgeInsets.all(10),
+                padding: const EdgeInsets.fromLTRB(15, 10, 15, 10),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
