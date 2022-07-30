@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:stunting/pages/menu-and-articles/articles/article1.dart';
 import 'package:stunting/pages/quiz/dashboard.dart';
 import 'package:stunting/pages/quiz/score.dart';
 import 'package:stunting/theme/color.dart';
@@ -26,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void onDone() {
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
-        builder: (context) => Dashboard(),
+        builder: (context) => Article1(),
       ),
     );
   }
