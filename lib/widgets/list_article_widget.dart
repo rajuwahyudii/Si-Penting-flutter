@@ -12,6 +12,7 @@ class ListArticleWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
           ' - ',

@@ -2,6 +2,10 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:stunting/pages/menu-and-articles/articles/article1.dart';
+import 'package:stunting/pages/menu-and-articles/articles/article2.dart';
+import 'package:stunting/pages/menu-and-articles/articles/article3.dart';
+import 'package:stunting/pages/menu-and-articles/articles/article4.dart';
+import 'package:stunting/pages/menu-and-articles/articles/article5.dart';
 import 'package:stunting/theme/color.dart';
 import 'package:stunting/theme/font.dart';
 
@@ -26,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void onDone() {
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
-        builder: (context) => const Article1(),
+        builder: (context) => const Article5(),
       ),
     );
   }
