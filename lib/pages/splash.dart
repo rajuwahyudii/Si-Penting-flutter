@@ -2,8 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:stunting/pages/menu-and-articles/articles/article1.dart';
-import 'package:stunting/pages/quiz/dashboard.dart';
-import 'package:stunting/pages/quiz/score.dart';
 import 'package:stunting/theme/color.dart';
 import 'package:stunting/theme/font.dart';
 
@@ -15,6 +13,7 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  @override
   void initState() {
     splashTimer();
     super.initState();
@@ -27,7 +26,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void onDone() {
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
-        builder: (context) => Article1(),
+        builder: (context) => const Article1(),
       ),
     );
   }

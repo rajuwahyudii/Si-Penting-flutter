@@ -6,7 +6,7 @@ import 'package:stunting/widgets/button.dart';
 import 'package:stunting/widgets/dashboard_widget.dart';
 
 class Dashboard extends StatefulWidget {
-  Dashboard({Key? key}) : super(key: key);
+  const Dashboard({Key? key}) : super(key: key);
 
   @override
   State<Dashboard> createState() => _DashboardState();

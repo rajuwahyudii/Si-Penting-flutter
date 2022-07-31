@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:stunting/theme/color.dart';
 
 class BarArticlesAdminWidget extends StatelessWidget {
   final String judul;

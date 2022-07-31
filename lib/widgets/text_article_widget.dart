@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -12,10 +11,10 @@ class TextArticleWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Container(
+    return SizedBox(
       width: size.width * 0.9,
       child: Text(
-        '   ' + text,
+        '   $text',
         style: GoogleFonts.poppins(
           fontSize: 15,
           fontWeight: FontWeight.w400,

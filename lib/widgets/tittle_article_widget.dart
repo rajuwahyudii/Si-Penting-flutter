@@ -11,7 +11,7 @@ class TitleArticelWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Container(
+    return SizedBox(
       width: size.width * 0.9,
       child: Text(
         title,
