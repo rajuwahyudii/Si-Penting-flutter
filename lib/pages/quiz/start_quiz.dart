@@ -11,28 +11,6 @@ class StartQuiz extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: backgroundColor,
-      appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(
-            Icons.arrow_back,
-          ),
-          onPressed: () {
-            Navigator.pop(
-              context,
-            );
-          },
-        ),
-        backgroundColor: backgroundColor,
-        title: Text(
-          'Siap mengerjakan quiz',
-          style: GoogleFonts.poppins(
-            fontSize: 18,
-            fontWeight: FontWeight.w600,
-            color: Colors.white,
-          ),
-        ),
-        centerTitle: true,
-      ),
       body: Container(
         padding: const EdgeInsets.all(10),
         width: size.width,
