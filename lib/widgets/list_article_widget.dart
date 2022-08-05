@@ -13,9 +13,10 @@ class ListArticleWidget extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          ' - ',
+          ' • ',
           style: GoogleFonts.poppins(
             fontSize: 15,
             fontWeight: FontWeight.w400,
@@ -23,7 +24,10 @@ class ListArticleWidget extends StatelessWidget {
           ),
         ),
         Container(
-          padding: const EdgeInsets.only(left: 10, bottom: 10),
+          padding: const EdgeInsets.only(
+            left: 10,
+            bottom: 10,
+          ),
           width: size.width * 0.9,
           child: Text(
             text,
