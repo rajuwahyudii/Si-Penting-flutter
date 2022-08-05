@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.stunting">
+    package="com.techid.stunting">
    <application
         android:label="stunting"
         android:name="${applicationName}"
