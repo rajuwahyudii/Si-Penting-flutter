@@ -62,9 +62,12 @@ class _LoginState extends State<Login> {
                   ask: 'Belum punya akun? ',
                   fiture: 'Register',
                   press: () {
-                    Navigator.of(context).pushReplacement(
+                    Navigator.push(
+                      context,
                       MaterialPageRoute(
-                        builder: (contex) => const Register(),
+                        builder: (context) {
+                          return Register();
+                        },
                       ),
                     );
                   },
