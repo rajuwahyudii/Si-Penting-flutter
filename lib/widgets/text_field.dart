@@ -6,11 +6,13 @@ class InputButtonWidget extends StatelessWidget {
   final TextInputType keyboard;
   final String label;
   final bool obsuretext;
+  final ValueChanged<String>? onChanged;
   const InputButtonWidget({
     required this.obsuretext,
     required this.controller,
     required this.keyboard,
     required this.label,
+    this.onChanged,
     Key? key,
   }) : super(key: key);
 
@@ -34,6 +36,7 @@ class InputButtonWidget extends StatelessWidget {
             keyboardType: keyboard,
             controller: controller,
             obscureText: obsuretext,
+            onChanged: onChanged,
             decoration: InputDecoration(
               floatingLabelAlignment: FloatingLabelAlignment.center,
               floatingLabelBehavior: FloatingLabelBehavior.auto,

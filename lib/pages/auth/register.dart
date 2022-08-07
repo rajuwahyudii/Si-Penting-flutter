@@ -15,12 +15,12 @@ class Register extends StatefulWidget {
 }
 
 class _RegisterState extends State<Register> {
+  TextEditingController namaController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
   final password = true;
   @override
   Widget build(BuildContext context) {
-    TextEditingController namaController = TextEditingController();
-    TextEditingController emailController = TextEditingController();
-    TextEditingController passwordController = TextEditingController();
     var size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: backgroundColor,

@@ -28,8 +28,10 @@ class AuthServices {
       User? firebaseUser = result.user;
       await FirebaseFirestore.instance
           .collection('user')
-          .add({
+          .doc(user.uid)
+          .set({
             "id": user.uid,
+            "role": "user",
             "nama": nama,
             "email": email,
             "password": password,
