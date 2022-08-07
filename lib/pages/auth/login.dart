@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stunting/common/services.dart';
 import 'package:stunting/pages/auth/register.dart';
 import 'package:stunting/theme/color.dart';
 import 'package:stunting/theme/font.dart';
@@ -79,7 +80,15 @@ class _LoginState extends State<Login> {
                   textColor: Colors.white,
                   buttonColor: buttonBlueColor,
                   text: 'Login',
-                  press: () {},
+                  press: () async {
+                    await AuthServices.signIn(
+                            emailController.text, passwordController.text)
+                        .then(
+                      (value) => Text(
+                        'succes',
+                      ),
+                    );
+                  },
                 )
               ],
             ),

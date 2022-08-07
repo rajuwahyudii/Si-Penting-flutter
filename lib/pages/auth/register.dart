@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stunting/common/services.dart';
 import 'package:stunting/pages/auth/login.dart';
 import 'package:stunting/theme/color.dart';
 import 'package:stunting/theme/font.dart';
@@ -86,7 +87,13 @@ class _RegisterState extends State<Register> {
                   textColor: Colors.white,
                   buttonColor: buttonBlueColor,
                   text: 'Register',
-                  press: () {},
+                  press: () async {
+                    await AuthServices.signUp(
+                      emailController.text,
+                      passwordController.text,
+                      namaController.text,
+                    );
+                  },
                 )
               ],
             ),
