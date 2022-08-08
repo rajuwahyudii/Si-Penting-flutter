@@ -19,7 +19,9 @@ class Article5 extends StatelessWidget {
           icon: const Icon(
             Icons.arrow_back,
           ),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
         backgroundColor: backgroundColor,
         title: Text(

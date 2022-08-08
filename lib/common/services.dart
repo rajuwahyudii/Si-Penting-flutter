@@ -38,6 +38,7 @@ class AuthServices {
             "nama": nama,
             "email": email,
             "password": password,
+            "class": 1,
             "createdAt": DateTime.now()
           })
           .then(

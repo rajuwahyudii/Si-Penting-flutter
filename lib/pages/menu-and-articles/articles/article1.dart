@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:stunting/pages/menu.dart';
 import 'package:stunting/theme/color.dart';
 import 'package:stunting/widgets/list_article_widget.dart';
 import 'package:stunting/widgets/sub_judul_artikel_widget.dart';
@@ -19,7 +20,9 @@ class Article1 extends StatelessWidget {
           icon: const Icon(
             Icons.arrow_back,
           ),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
         backgroundColor: backgroundColor,
         title: Text(

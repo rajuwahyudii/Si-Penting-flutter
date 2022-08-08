@@ -4,8 +4,17 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:stunting/common/services.dart';
+import 'package:stunting/models/materi_model.dart';
 import 'package:stunting/pages/admin/admin.dart';
+import 'package:stunting/pages/menu-and-articles/articles/article1.dart';
+import 'package:stunting/pages/menu-and-articles/articles/article2.dart';
+import 'package:stunting/pages/menu-and-articles/articles/article3.dart';
+import 'package:stunting/pages/menu-and-articles/articles/article4.dart';
+import 'package:stunting/pages/menu-and-articles/articles/article5.dart';
 import 'package:stunting/theme/color.dart';
+import 'package:stunting/widgets/article_menu.dart';
+import 'package:stunting/widgets/card_menu.dart';
+import 'package:stunting/widgets/materi_menu.dart';
 
 class Menu extends StatefulWidget {
   const Menu({Key? key}) : super(key: key);
@@ -34,6 +43,7 @@ class _MenuState extends State<Menu> {
               snapshot.data!.data() as Map<String, dynamic>;
 
           var role = '${data['role']}';
+          var materi = 5;
           return Scaffold(
             backgroundColor: backgroundColor,
             appBar: AppBar(
@@ -90,6 +100,105 @@ class _MenuState extends State<Menu> {
                         width: 180,
                       ),
                     ),
+                    const SizedBox(
+                      height: 30,
+                    ),
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: index != 1
+                          ? Column(
+                              children: <Widget>[
+                                ArticleMenu(
+                                  title:
+                                      'Remaja Ternyata Memiliki Peran Penting dalam Mencegah Stunting',
+                                  press: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => const Article1(),
+                                      ),
+                                    );
+                                  },
+                                ),
+                                ArticleMenu(
+                                  title:
+                                      'Mencegah Stunting Dimulai dari Masa Remaja, Begini caranya!',
+                                  press: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => const Article2(),
+                                      ),
+                                    );
+                                  },
+                                ),
+                                ArticleMenu(
+                                  title:
+                                      'Mengatasi Stunting Dari Kaca Mata Remaja',
+                                  press: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => const Article3(),
+                                      ),
+                                    );
+                                  },
+                                ),
+                                ArticleMenu(
+                                  title:
+                                      'Saatnya Remaja Turut Dilibatkan untuk Cegah Stunting',
+                                  press: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => const Article4(),
+                                      ),
+                                    );
+                                  },
+                                ),
+                                ArticleMenu(
+                                  title: 'Cegah Stunting Itu Penting!',
+                                  press: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => const Article5(),
+                                      ),
+                                    );
+                                  },
+                                ),
+                              ],
+                            )
+                          : Column(
+                              children: [
+                                if (materi > 0)
+                                  MateriMenu(
+                                    number: 1,
+                                    isDone: materi != 1 ? true : false,
+                                  ),
+                                if (materi > 1)
+                                  MateriMenu(
+                                    isDone: materi != 2 ? true : false,
+                                    number: 2,
+                                  ),
+                                if (materi > 2)
+                                  MateriMenu(
+                                    isDone: materi != 3 ? true : false,
+                                    number: 3,
+                                  ),
+                                if (materi > 3)
+                                  MateriMenu(
+                                    isDone: materi != 4 ? true : false,
+                                    number: 4,
+                                  ),
+                                if (materi > 4)
+                                  MateriMenu(
+                                    isDone: materi != 5 ? true : false,
+                                    number: 5,
+                                  )
+                              ],
+                            ),
+                    )
                   ],
                 ),
               ),
