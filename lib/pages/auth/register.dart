@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:stunting/common/services.dart';
 import 'package:stunting/pages/auth/login.dart';
+import 'package:stunting/pages/wrapper.dart';
 import 'package:stunting/theme/color.dart';
 import 'package:stunting/theme/font.dart';
 import 'package:stunting/widgets/button.dart';
@@ -92,6 +93,20 @@ class _RegisterState extends State<Register> {
                       emailController.text,
                       passwordController.text,
                       namaController.text,
+                    ).then(
+                      (value) => ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text(value != null
+                              ? "Registrasi Berhasil"
+                              : "Registrasi Gagal"),
+                        ),
+                      ),
+                    );
+                    // ignore: use_build_context_synchronously
+                    await Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(
+                        builder: (context) => const Wrapper(),
+                      ),
                     );
                   },
                 )

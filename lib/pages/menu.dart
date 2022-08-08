@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:stunting/common/services.dart';
 import 'package:stunting/pages/admin/admin.dart';
 import 'package:stunting/theme/color.dart';
 
@@ -23,7 +24,9 @@ class _MenuState extends State<Menu> {
           icon: const Icon(
             Icons.logout_outlined,
           ),
-          onPressed: () {},
+          onPressed: () async {
+            AuthServices.signOut();
+          },
         ),
         backgroundColor: backgroundColor,
         actions: [

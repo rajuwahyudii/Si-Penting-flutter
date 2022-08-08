@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:stunting/common/services.dart';
 import 'package:stunting/pages/auth/register.dart';
+import 'package:stunting/pages/wrapper.dart';
 import 'package:stunting/theme/color.dart';
 import 'package:stunting/theme/font.dart';
 import 'package:stunting/widgets/button.dart';
@@ -84,8 +85,18 @@ class _LoginState extends State<Login> {
                     await AuthServices.signIn(
                             emailController.text, passwordController.text)
                         .then(
-                      (value) => Text(
-                        'succes',
+                      (value) => ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text(value != null
+                              ? "Login Berhasil"
+                              : "Data Anda Salah"),
+                        ),
+                      ),
+                    );
+                    // ignore: use_build_context_synchronously
+                    await Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(
+                        builder: (context) => const Wrapper(),
                       ),
                     );
                   },

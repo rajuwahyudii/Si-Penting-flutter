@@ -38,16 +38,21 @@ class AuthServices {
             "createdAt": DateTime.now()
           })
           .then(
-            (value) => print('Pasien berhasil ditambah'),
+            (value) => print('User berhasil ditambah'),
           )
           .catchError(
-            (error) => print('Pasien gagal ditambahkan $error'),
+            (error) => print('User gagal ditambahkan $error'),
           );
       return firebaseUser;
     } catch (e) {
       print(e.toString());
       return null;
     }
+  }
+
+  //logout
+  static Future<User?> signOut() async {
+    await auth.signOut();
   }
 
   // ignore: non_constant_identifier_names
