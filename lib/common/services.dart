@@ -6,7 +6,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 class AuthServices {
   static FirebaseAuth auth = FirebaseAuth.instance;
   static User user = auth.currentUser!;
-  final id = user.uid;
 
   //login dengan menggunakan email dan password
   static Future<User?> signIn(String email, String password) async {
@@ -18,7 +17,17 @@ class AuthServices {
     } catch (e) {
       print('e');
     }
-    return null;
+  }
+
+//next materi
+  static Future<User?> nextMateri(int index) async {
+    try {
+      await FirebaseFirestore.instance.collection('user').doc(user.uid).update({
+        "class": index,
+      });
+    } catch (e) {
+      print(e.toString());
+    }
   }
 
   //Register
@@ -50,14 +59,12 @@ class AuthServices {
       return firebaseUser;
     } catch (e) {
       print(e.toString());
-      return null;
     }
   }
 
   //logout
   static Future<User?> signOut() async {
     await auth.signOut();
-    return null;
   }
 
   // ignore: non_constant_identifier_names

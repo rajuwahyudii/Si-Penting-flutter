@@ -4,16 +4,22 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:stunting/common/services.dart';
-import 'package:stunting/models/materi_model.dart';
 import 'package:stunting/pages/admin/admin.dart';
 import 'package:stunting/pages/menu-and-articles/articles/article1.dart';
 import 'package:stunting/pages/menu-and-articles/articles/article2.dart';
 import 'package:stunting/pages/menu-and-articles/articles/article3.dart';
 import 'package:stunting/pages/menu-and-articles/articles/article4.dart';
 import 'package:stunting/pages/menu-and-articles/articles/article5.dart';
+import 'package:stunting/pages/menu-and-articles/materi/materi1.dart';
+import 'package:stunting/pages/menu-and-articles/materi/materi2.dart';
+import 'package:stunting/pages/menu-and-articles/materi/materi3.dart';
+import 'package:stunting/pages/menu-and-articles/materi/materi4.dart';
+import 'package:stunting/pages/menu-and-articles/materi/materi5.dart';
+import 'package:stunting/pages/menu-and-articles/materi/materi6.dart';
+import 'package:stunting/pages/menu-and-articles/materi/materi7.dart';
+import 'package:stunting/pages/wrapper.dart';
 import 'package:stunting/theme/color.dart';
 import 'package:stunting/widgets/article_menu.dart';
-import 'package:stunting/widgets/card_menu.dart';
 import 'package:stunting/widgets/materi_menu.dart';
 
 class Menu extends StatefulWidget {
@@ -43,7 +49,7 @@ class _MenuState extends State<Menu> {
               snapshot.data!.data() as Map<String, dynamic>;
 
           var role = '${data['role']}';
-          var materi = 5;
+          var materi = int.parse('${data['class']}');
           return Scaffold(
             backgroundColor: backgroundColor,
             appBar: AppBar(
@@ -52,7 +58,29 @@ class _MenuState extends State<Menu> {
                   Icons.logout_outlined,
                 ),
                 onPressed: () async {
-                  AuthServices.signOut();
+                  await AuthServices.signOut()
+                      .then(
+                        (value) => ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text("Berhasil Logout"),
+                          ),
+                        ),
+                      )
+                      .onError(
+                        (error, stackTrace) =>
+                            ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text("Gagal Logout"),
+                          ),
+                        ),
+                      );
+                  // ignore: use_build_context_synchronously
+                  await Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const Wrapper(),
+                    ),
+                  );
                 },
               ),
               backgroundColor: backgroundColor,
@@ -175,26 +203,92 @@ class _MenuState extends State<Menu> {
                                   MateriMenu(
                                     number: 1,
                                     isDone: materi != 1 ? true : false,
+                                    press: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => const Materi1(),
+                                        ),
+                                      );
+                                    },
                                   ),
                                 if (materi > 1)
                                   MateriMenu(
                                     isDone: materi != 2 ? true : false,
                                     number: 2,
+                                    press: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => const Materi2(),
+                                        ),
+                                      );
+                                    },
                                   ),
                                 if (materi > 2)
                                   MateriMenu(
                                     isDone: materi != 3 ? true : false,
                                     number: 3,
+                                    press: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => const Materi3(),
+                                        ),
+                                      );
+                                    },
                                   ),
                                 if (materi > 3)
                                   MateriMenu(
                                     isDone: materi != 4 ? true : false,
                                     number: 4,
+                                    press: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => const Materi4(),
+                                        ),
+                                      );
+                                    },
                                   ),
                                 if (materi > 4)
                                   MateriMenu(
                                     isDone: materi != 5 ? true : false,
                                     number: 5,
+                                    press: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => const Materi5(),
+                                        ),
+                                      );
+                                    },
+                                  ),
+                                if (materi > 5)
+                                  MateriMenu(
+                                    isDone: materi != 6 ? true : false,
+                                    number: 6,
+                                    press: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => const Materi6(),
+                                        ),
+                                      );
+                                    },
+                                  ),
+                                if (materi > 6)
+                                  MateriMenu(
+                                    isDone: materi != 7 ? true : false,
+                                    number: 7,
+                                    press: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => const Materi7(),
+                                        ),
+                                      );
+                                    },
                                   )
                               ],
                             ),

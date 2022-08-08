@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:stunting/theme/color.dart';
 import 'package:stunting/widgets/button.dart';
 
+// ignore: must_be_immutable
 class StartQuiz extends StatelessWidget {
-  const StartQuiz({Key? key}) : super(key: key);
+  String text;
+  Function press;
+  StartQuiz({
+    required this.text,
+    required this.press,
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,8 +29,8 @@ class StartQuiz extends StatelessWidget {
               width: 254,
             ),
             CustomButtonWidget(
-              text: 'Start Quiz',
-              press: () {},
+              text: text,
+              press: press,
               buttonColor: yellowButtonColor,
               textColor: Colors.black,
             )

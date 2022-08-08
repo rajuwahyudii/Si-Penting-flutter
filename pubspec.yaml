@@ -40,6 +40,8 @@ dependencies:
   cloud_firestore: ^3.4.3
   firebase_storage: ^10.3.4
   loading_animation_widget: ^1.2.0+2
+  encrypt: ^5.0.1
+  xid: ^1.0.7
 
 dev_dependencies:
   flutter_test:
