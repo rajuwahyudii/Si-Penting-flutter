@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
@@ -16,6 +18,7 @@ class AuthServices {
     } catch (e) {
       print('e');
     }
+    return null;
   }
 
   //Register
@@ -53,6 +56,7 @@ class AuthServices {
   //logout
   static Future<User?> signOut() async {
     await auth.signOut();
+    return null;
   }
 
   // ignore: non_constant_identifier_names
