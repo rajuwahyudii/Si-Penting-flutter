@@ -10,6 +10,6 @@ class Wrapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     User? firebaseUser = Provider.of<User?>(context);
-    return (firebaseUser == null) ? Login() : Menu();
+    return (firebaseUser == null) ? const Login() : const Menu();
   }
 }

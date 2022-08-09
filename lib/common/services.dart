@@ -8,6 +8,7 @@ class AuthServices {
   static User user = auth.currentUser!;
 
   //login dengan menggunakan email dan password
+  // ignore: body_might_complete_normally_nullable
   static Future<User?> signIn(String email, String password) async {
     try {
       UserCredential result = await auth.signInWithEmailAndPassword(
@@ -20,6 +21,7 @@ class AuthServices {
   }
 
 //next materi
+  // ignore: body_might_complete_normally_nullable
   static Future<User?> nextMateri(int index) async {
     try {
       await FirebaseFirestore.instance.collection('user').doc(user.uid).update({
@@ -31,6 +33,7 @@ class AuthServices {
   }
 
   //Register
+  // ignore: body_might_complete_normally_nullable
   static Future<User?> signUp(
       String email, String password, String nama) async {
     try {
@@ -63,6 +66,7 @@ class AuthServices {
   }
 
   //logout
+  // ignore: body_might_complete_normally_nullable
   static Future<User?> signOut() async {
     await auth.signOut();
   }

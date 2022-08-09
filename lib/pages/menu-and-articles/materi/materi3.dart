@@ -4,7 +4,6 @@ import 'package:stunting/common/services.dart';
 import 'package:stunting/pages/menu.dart';
 import 'package:stunting/theme/color.dart';
 import 'package:stunting/widgets/end_of_materi.dart';
-import 'package:stunting/widgets/list_article_widget.dart';
 import 'package:stunting/widgets/sub_judul_artikel_widget.dart';
 import 'package:stunting/widgets/text_article_widget.dart';
 import 'package:stunting/widgets/tittle_article_widget.dart';
@@ -17,7 +16,7 @@ class Materi3 extends StatefulWidget {
 }
 
 class _Materi3State extends State<Materi3> {
-  PageController _pageController = PageController();
+  PageController pageController = PageController();
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -45,7 +44,7 @@ class _Materi3State extends State<Materi3> {
         width: size.width,
         height: size.height,
         child: PageView(
-          controller: _pageController,
+          controller: pageController,
           children: <Widget>[
             Column(
               children: const <Widget>[

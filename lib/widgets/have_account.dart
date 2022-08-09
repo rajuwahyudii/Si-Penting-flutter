@@ -30,6 +30,7 @@ class HaveAccount extends StatelessWidget {
             ),
           ),
           TextButton(
+            // ignore: unnecessary_null_comparison
             onPressed: press != null
                 ? () {
                     press();

@@ -15,7 +15,7 @@ class Materi1 extends StatefulWidget {
 }
 
 class _Materi1State extends State<Materi1> {
-  PageController _pageController = PageController();
+  PageController pageController = PageController();
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -43,7 +43,7 @@ class _Materi1State extends State<Materi1> {
         width: size.width,
         height: size.height,
         child: PageView(
-          controller: _pageController,
+          controller: pageController,
           children: <Widget>[
             Column(
               children: <Widget>[

@@ -28,6 +28,7 @@ class CustomButtonWidget extends StatelessWidget {
 
   Widget newElevatedButton() {
     return ElevatedButton(
+      // ignore: sort_child_properties_last
       child: Text(
         text,
         style: GoogleFonts.poppins(
@@ -36,6 +37,7 @@ class CustomButtonWidget extends StatelessWidget {
           color: textColor,
         ),
       ),
+      // ignore: unnecessary_null_comparison
       onPressed: press != null
           ? () {
               press();

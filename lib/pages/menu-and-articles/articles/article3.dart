@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:stunting/theme/color.dart';
-import 'package:stunting/widgets/list_article_widget.dart';
-import 'package:stunting/widgets/sub_judul_artikel_widget.dart';
 import 'package:stunting/widgets/text_article_widget.dart';
 import 'package:stunting/widgets/tittle_article_widget.dart';
 
