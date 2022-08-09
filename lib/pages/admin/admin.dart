@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:stunting/pages/admin/artikel_admin.dart';
+import 'package:stunting/pages/menu.dart';
 import 'package:stunting/theme/color.dart';
 import 'package:stunting/widgets/admin_menus.dart';
 
@@ -23,7 +24,12 @@ class _AdminPageState extends State<AdminPage> {
             Icons.arrow_back,
           ),
           onPressed: () {
-            Navigator.pop(context);
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const Menu(),
+              ),
+            );
           },
         ),
         backgroundColor: backgroundColor,
@@ -57,8 +63,8 @@ class _AdminPageState extends State<AdminPage> {
                   press: () {},
                 ),
                 AdminMenusWidget(
-                  url: 'assets/images/book.png',
-                  text: 'Artikel',
+                  url: 'assets/images/question.png',
+                  text: 'Pertanyaan',
                   press: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(

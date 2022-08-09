@@ -3,12 +3,12 @@ import 'package:google_fonts/google_fonts.dart';
 
 // ignore: must_be_immutable
 class MateriMenu extends StatelessWidget {
-  int number;
+  String title;
   bool isDone = false;
   Function? press;
   MateriMenu({
+    required this.title,
     this.press,
-    required this.number,
     required this.isDone,
     Key? key,
   }) : super(key: key);
@@ -40,7 +40,7 @@ class MateriMenu extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Materi $number',
+                  '$title ',
                   style: GoogleFonts.poppins(
                     fontSize: 18,
                     fontWeight: FontWeight.w600,

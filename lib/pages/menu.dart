@@ -17,7 +17,8 @@ import 'package:stunting/pages/menu-and-articles/materi/materi4.dart';
 import 'package:stunting/pages/menu-and-articles/materi/materi5.dart';
 import 'package:stunting/pages/menu-and-articles/materi/materi6.dart';
 import 'package:stunting/pages/menu-and-articles/materi/materi7.dart';
-import 'package:stunting/pages/wrapper.dart';
+import 'package:stunting/pages/quiz/quiz.dart';
+import 'package:stunting/pages/quiz/start_quiz.dart';
 import 'package:stunting/theme/color.dart';
 import 'package:stunting/widgets/article_menu.dart';
 import 'package:stunting/widgets/materi_menu.dart';
@@ -75,11 +76,12 @@ class _MenuState extends State<Menu> {
                         ),
                       );
                   // ignore: use_build_context_synchronously
-                  await Navigator.pushReplacement(
+                  await Navigator.pushAndRemoveUntil(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const Wrapper(),
-                    ),
+                        builder: (context) => const Quiz(),
+                        maintainState: true),
+                    (Route<dynamic> route) => false,
                   );
                 },
               ),
@@ -201,7 +203,7 @@ class _MenuState extends State<Menu> {
                               children: [
                                 if (materi > 0)
                                   MateriMenu(
-                                    number: 1,
+                                    title: 'Materi 1',
                                     isDone: materi != 1 ? true : false,
                                     press: () {
                                       Navigator.push(
@@ -214,8 +216,8 @@ class _MenuState extends State<Menu> {
                                   ),
                                 if (materi > 1)
                                   MateriMenu(
+                                    title: 'Materi 2',
                                     isDone: materi != 2 ? true : false,
-                                    number: 2,
                                     press: () {
                                       Navigator.push(
                                         context,
@@ -227,8 +229,8 @@ class _MenuState extends State<Menu> {
                                   ),
                                 if (materi > 2)
                                   MateriMenu(
+                                    title: 'Materi 3',
                                     isDone: materi != 3 ? true : false,
-                                    number: 3,
                                     press: () {
                                       Navigator.push(
                                         context,
@@ -240,8 +242,8 @@ class _MenuState extends State<Menu> {
                                   ),
                                 if (materi > 3)
                                   MateriMenu(
+                                    title: 'Materi 4',
                                     isDone: materi != 4 ? true : false,
-                                    number: 4,
                                     press: () {
                                       Navigator.push(
                                         context,
@@ -253,8 +255,8 @@ class _MenuState extends State<Menu> {
                                   ),
                                 if (materi > 4)
                                   MateriMenu(
+                                    title: 'Materi 5',
                                     isDone: materi != 5 ? true : false,
-                                    number: 5,
                                     press: () {
                                       Navigator.push(
                                         context,
@@ -266,8 +268,8 @@ class _MenuState extends State<Menu> {
                                   ),
                                 if (materi > 5)
                                   MateriMenu(
+                                    title: 'Materi 6',
                                     isDone: materi != 6 ? true : false,
-                                    number: 6,
                                     press: () {
                                       Navigator.push(
                                         context,
@@ -279,13 +281,37 @@ class _MenuState extends State<Menu> {
                                   ),
                                 if (materi > 6)
                                   MateriMenu(
+                                    title: 'Materi 7',
                                     isDone: materi != 7 ? true : false,
-                                    number: 7,
                                     press: () {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
                                           builder: (context) => const Materi7(),
+                                        ),
+                                      );
+                                    },
+                                  ),
+                                if (materi > 7)
+                                  MateriMenu(
+                                    title: 'Quis',
+                                    isDone: materi != 8 ? true : false,
+                                    press: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => StartQuiz(
+                                            press: () {
+                                              Navigator.pushReplacement(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      const Quiz(),
+                                                ),
+                                              );
+                                            },
+                                            text: 'Start Quiz',
+                                          ),
                                         ),
                                       );
                                     },

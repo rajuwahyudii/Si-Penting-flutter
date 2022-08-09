@@ -31,14 +31,11 @@ class AdminMenusWidget extends StatelessWidget {
           ),
         ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             Image.asset(
               url,
-              width: 60,
-            ),
-            const SizedBox(
-              height: 20,
+              width: 50,
             ),
             Text(
               text,

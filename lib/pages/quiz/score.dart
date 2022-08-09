@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:stunting/pages/quiz/dashboard.dart';
 import 'package:stunting/theme/color.dart';
 import 'package:stunting/widgets/button.dart';
 
@@ -62,7 +63,14 @@ class Score extends StatelessWidget {
             ),
             CustomButtonWidget(
                 text: 'Dashboard',
-                press: () {},
+                press: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const Dashboard(),
+                    ),
+                  );
+                },
                 buttonColor: yellowButtonColor,
                 textColor: Colors.black)
           ],
