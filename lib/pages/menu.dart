@@ -201,6 +201,19 @@ class _MenuState extends State<Menu> {
                             )
                           : Column(
                               children: [
+                                if (materi > -1)
+                                  MateriMenu(
+                                    title: 'Pre Test',
+                                    isDone: materi != 0 ? true : false,
+                                    press: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => const Materi1(),
+                                        ),
+                                      );
+                                    },
+                                  ),
                                 if (materi > 0)
                                   MateriMenu(
                                     title: 'Materi 1',
@@ -294,7 +307,7 @@ class _MenuState extends State<Menu> {
                                   ),
                                 if (materi > 7)
                                   MateriMenu(
-                                    title: 'Quis',
+                                    title: 'Post Test',
                                     isDone: materi != 8 ? true : false,
                                     press: () {
                                       Navigator.push(
