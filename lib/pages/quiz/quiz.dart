@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:stunting/theme/color.dart';
+import 'package:stunting/widgets/soal.dart';
 
 class Quiz extends StatefulWidget {
   const Quiz({Key? key}) : super(key: key);
@@ -28,17 +29,18 @@ class _QuizState extends State<Quiz> {
         ),
         centerTitle: true,
       ),
-      bottomNavigationBar: Container(
-        decoration: const BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(27),
-            topRight: Radius.circular(27),
-          ),
-        ),
-        width: size.width,
-        height: size.height * 0.3,
-      ),
+      body: Soal(),
+      // bottomNavigationBar: Container(
+      //   decoration: const BoxDecoration(
+      //     color: Colors.white,
+      //     borderRadius: BorderRadius.only(
+      //       topLeft: Radius.circular(27),
+      //       topRight: Radius.circular(27),
+      //     ),
+      //   ),
+      //   width: size.width,
+      //   height: size.height * 0.3,
+      // ),
     );
   }
 }
