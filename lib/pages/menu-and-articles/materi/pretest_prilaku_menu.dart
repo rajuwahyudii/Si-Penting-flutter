@@ -6,13 +6,12 @@ import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:stunting/common/services.dart';
 import 'package:stunting/pages/menu.dart';
 import 'package:stunting/pages/quiz/pretestg.dart';
+import 'package:stunting/pages/quiz/pretestprilaku.dart';
 import 'package:stunting/theme/color.dart';
 import 'package:stunting/widgets/done_test.dart';
 import 'package:stunting/widgets/end_of_materi.dart';
 import 'package:stunting/widgets/introduction_test.dart';
-import 'package:stunting/widgets/sub_judul_artikel_widget.dart';
-import 'package:stunting/widgets/text_article_widget.dart';
-import 'package:stunting/widgets/tittle_article_widget.dart';
+import 'package:stunting/widgets/list_article_widget.dart';
 
 class PretestPrilakuMenu extends StatefulWidget {
   const PretestPrilakuMenu({Key? key}) : super(key: key);
@@ -50,7 +49,7 @@ class _PretestPrilakuMenuState extends State<PretestPrilakuMenu> {
               ),
               backgroundColor: backgroundColor,
               title: Text(
-                'Pretest Pilihan Ganda',
+                'Pretest Prilaku',
                 style: GoogleFonts.poppins(
                   fontSize: 23,
                   fontWeight: FontWeight.w600,
@@ -65,41 +64,51 @@ class _PretestPrilakuMenuState extends State<PretestPrilakuMenu> {
               child: PageView(
                 controller: pageController,
                 children: <Widget>[
-                  if (materi > 0)
+                  if (materi > 4)
                     DoneTest(
                         introduction:
-                            'Kamu Telah Menyelesaikan\n Pretest Pilihan Ganda'),
-                  if (materi < 1)
-                    IntroductionTest(
-                      introduction:
-                          'Pilihlah jawaban yang paling kamu anggap benar! Isilah secara jujur karena ini tidak akan mempengaruhi nilai kamu atau apapun. ini hanya untuk melihat gambaran pengetahuan kamu sebelum terpapar dengan materi di dalam aplikasi.',
+                            'Kamu Telah Menyelesaikan\n Pretest Prilaku'),
+                  if (materi < 5)
+                    Column(
+                      children: [
+                        IntroductionTest(
+                          introduction:
+                              'Tandailah sesuai dengan prilaku kamu terhadap setiap pernyataan. Isilah dengan jujur Keterangan:',
+                        ),
+                        const ListArticleWidget(
+                          text: '1 = Selalu',
+                        ),
+                        const ListArticleWidget(
+                          text: '2 = Sering',
+                        ),
+                        const ListArticleWidget(
+                          text: '3 =  Jarang',
+                        ),
+                        const ListArticleWidget(
+                          text: '4 = Tidak Pernah',
+                        ),
+                        const SizedBox(
+                          height: 50,
+                          child: Align(
+                            alignment: Alignment.centerRight,
+                            child: Icon(
+                              Icons.arrow_right_alt_outlined,
+                              color: Colors.white,
+                              size: 50,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
-                  if (materi < 1)
+                  if (materi < 5)
                     EndOfMateri(
                       text: 'Mulai',
                       press: () async {
-                        // await AuthServices.nextMateri(1)
-                        //     .then(
-                        //       (value) =>
-                        //           ScaffoldMessenger.of(context).showSnackBar(
-                        //         const SnackBar(
-                        //           content: Text("Berhasil Menyelesaikan Prete"),
-                        //         ),
-                        //       ),
-                        //     )
-                        //     .onError(
-                        //       (error, stackTrace) =>
-                        //           ScaffoldMessenger.of(context).showSnackBar(
-                        //         const SnackBar(
-                        //           content: Text("Permintaan Gagal"),
-                        //         ),
-                        //       ),
-                        //     );
                         // ignore: use_build_context_synchronously
                         await Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const PretestG(),
+                            builder: (context) => const PretestPrilaku(),
                           ),
                         );
                       },

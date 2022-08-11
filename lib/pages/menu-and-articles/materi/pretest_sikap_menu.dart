@@ -3,16 +3,12 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
-import 'package:stunting/common/services.dart';
-import 'package:stunting/pages/menu.dart';
-import 'package:stunting/pages/quiz/pretestg.dart';
+import 'package:stunting/pages/quiz/pretestsikap.dart';
 import 'package:stunting/theme/color.dart';
 import 'package:stunting/widgets/done_test.dart';
 import 'package:stunting/widgets/end_of_materi.dart';
 import 'package:stunting/widgets/introduction_test.dart';
-import 'package:stunting/widgets/sub_judul_artikel_widget.dart';
-import 'package:stunting/widgets/text_article_widget.dart';
-import 'package:stunting/widgets/tittle_article_widget.dart';
+import 'package:stunting/widgets/list_article_widget.dart';
 
 class PretestSikapMenu extends StatefulWidget {
   const PretestSikapMenu({Key? key}) : super(key: key);
@@ -50,7 +46,7 @@ class _PretestSikapMenuState extends State<PretestSikapMenu> {
               ),
               backgroundColor: backgroundColor,
               title: Text(
-                'Pretest Pilihan Ganda',
+                'Pretest Sikap',
                 style: GoogleFonts.poppins(
                   fontSize: 23,
                   fontWeight: FontWeight.w600,
@@ -65,16 +61,43 @@ class _PretestSikapMenuState extends State<PretestSikapMenu> {
               child: PageView(
                 controller: pageController,
                 children: <Widget>[
-                  if (materi > 0)
+                  if (materi > 3)
                     DoneTest(
                         introduction:
-                            'Kamu Telah Menyelesaikan\n Pretest Pilihan Ganda'),
-                  if (materi < 1)
-                    IntroductionTest(
-                      introduction:
-                          'Pilihlah jawaban yang paling kamu anggap benar! Isilah secara jujur karena ini tidak akan mempengaruhi nilai kamu atau apapun. ini hanya untuk melihat gambaran pengetahuan kamu sebelum terpapar dengan materi di dalam aplikasi.',
+                            'Kamu Telah Menyelesaikan\n Pretest Sikap'),
+                  if (materi < 4)
+                    Column(
+                      children: [
+                        IntroductionTest(
+                          introduction:
+                              'Tandailah sesuai dengan sikap kamu terhadap setiap pernyataan. Isilah dengan jujur Keterangan:',
+                        ),
+                        const ListArticleWidget(
+                          text: '1 = Sangat Tidak Setuju',
+                        ),
+                        const ListArticleWidget(
+                          text: '2 = Tidak Setuju',
+                        ),
+                        const ListArticleWidget(
+                          text: '3 =  Setuju',
+                        ),
+                        const ListArticleWidget(
+                          text: '4 = Sangat Setuju',
+                        ),
+                        const SizedBox(
+                          height: 50,
+                          child: Align(
+                            alignment: Alignment.centerRight,
+                            child: Icon(
+                              Icons.arrow_right_alt_outlined,
+                              color: Colors.white,
+                              size: 50,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
-                  if (materi < 1)
+                  if (materi < 4)
                     EndOfMateri(
                       text: 'Mulai',
                       press: () async {
@@ -99,7 +122,7 @@ class _PretestSikapMenuState extends State<PretestSikapMenu> {
                         await Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const PretestG(),
+                            builder: (context) => const PretestSikap(),
                           ),
                         );
                       },

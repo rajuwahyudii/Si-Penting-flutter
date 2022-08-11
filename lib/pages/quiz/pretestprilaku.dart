@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:stunting/common/services.dart';
 import 'package:stunting/models/pretest_ganda.dart';
+import 'package:stunting/models/pretest_prilaku.dart';
 import 'package:stunting/pages/menu.dart';
 import 'package:stunting/widgets/finished.dart';
 import 'package:stunting/widgets/quiz2.dart';
 
-class PretestG extends StatefulWidget {
-  const PretestG({Key? key}) : super(key: key);
+class PretestPrilaku extends StatefulWidget {
+  const PretestPrilaku({Key? key}) : super(key: key);
 
   @override
   // ignore: library_private_types_in_public_api
-  _PretestGState createState() => _PretestGState();
+  _PretestPrilakuState createState() => _PretestPrilakuState();
 }
 
-class _PretestGState extends State<PretestG> {
+class _PretestPrilakuState extends State<PretestPrilaku> {
   int _index = 0;
   int _totalScroe = 0;
   bool isFinish = false;
@@ -23,7 +24,7 @@ class _PretestGState extends State<PretestG> {
     setState(() {
       _index++;
     });
-    if (_index < pretestGanda.length) {
+    if (_index < pretestPrilaku.length) {
       isFinish = false;
     } else {
       isFinish = true;
@@ -47,11 +48,11 @@ class _PretestGState extends State<PretestG> {
             ? Quiz(
                 index: _index,
                 questionsAnswer: _questionsAnswer,
-                questions: pretestGanda,
+                questions: pretestPrilaku,
               )
             : FinishScreen(
                 onPressed: () async {
-                  await AuthServices.nextMateri(2);
+                  await AuthServices.nextMateri(5);
                   // ignore: use_build_context_synchronously
                   await Navigator.push(
                     context,

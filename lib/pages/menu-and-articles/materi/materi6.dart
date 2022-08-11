@@ -161,11 +161,11 @@ class _Materi6State extends State<Materi6> {
                       )
                     ],
                   ),
-                  if (materi < 7)
+                  if (materi < 11)
                     EndOfMateri(
                       text: 'Lanjut',
                       press: () async {
-                        await AuthServices.nextMateri(7)
+                        await AuthServices.nextMateri(11)
                             .then(
                               (value) =>
                                   ScaffoldMessenger.of(context).showSnackBar(

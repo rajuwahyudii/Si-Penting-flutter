@@ -29,17 +29,6 @@ class IntroductionTest extends StatelessWidget {
             textAlign: TextAlign.justify,
           ),
         ),
-        const SizedBox(
-          height: 50,
-          child: Align(
-            alignment: Alignment.centerRight,
-            child: Icon(
-              Icons.arrow_right_alt_outlined,
-              color: Colors.white,
-              size: 50,
-            ),
-          ),
-        ),
       ],
     );
   }

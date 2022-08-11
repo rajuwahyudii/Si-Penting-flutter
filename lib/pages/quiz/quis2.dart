@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:stunting/models/pretest_sikap.dart';
 import 'package:stunting/models/pretest_ganda.dart';
+import 'package:stunting/models/pretest_sikap.dart';
 import 'package:stunting/widgets/finished.dart';
 import 'package:stunting/widgets/quiz2.dart';
 

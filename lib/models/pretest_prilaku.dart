@@ -1,25 +1,7 @@
-final List pretestSikap = [
+final List pretestPrilaku = [
   {
     'questionText':
-        'Stunting adalah ancaman suatu negara dan harus diatasi segera',
-    'answers': [
-      {"text": "Sangat Tidak Setuju", "score": 1},
-      {"text": "Tidak Setuju", "score": 3},
-      {"text": "Setuju", "score": 2},
-      {"text": "Sangat Setuju", "score": 4}
-    ],
-  },
-  {
-    'questionText': 'Stunting adalah karena orang tua pendek',
-    'answers': [
-      {"text": "Sangat Tidak Setuju", "score": 1},
-      {"text": "Tidak Setuju", "score": 3},
-      {"text": "Setuju", "score": 2},
-      {"text": "Sangat Setuju", "score": 4}
-    ],
-  },
-  {
-    'questionText': 'Siklus stunting akan tetap berlanjut tanpa henti',
+        'Saya mengukur status gizi secara mandiri dan rutin agar pertumbuhan saya terpantau ',
     'answers': [
       {"text": "Sangat Tidak Setuju", "score": 1},
       {"text": "Tidak Setuju", "score": 3},
@@ -29,7 +11,7 @@ final List pretestSikap = [
   },
   {
     'questionText':
-        'Menurut saya, stunting bukanlah masalah besar dan dapat teratasi seiring berjalannya waktu',
+        'Saya sudah memperbaiki pola makan ke arah yang lebih baik dan sehat ',
     'answers': [
       {"text": "Sangat Tidak Setuju", "score": 1},
       {"text": "Tidak Setuju", "score": 3},
@@ -39,7 +21,7 @@ final List pretestSikap = [
   },
   {
     'questionText':
-        'Stunting tidak dapat dicegah karena penyebab utamanya adalah faktor keturunan',
+        'Saya tertarik dan prihatin terhadap masalah gizi masyarakat Indonesia sehingga saya mencari pengetahuan lebih lanjut dari berbagai sumber ',
     'answers': [
       {"text": "Sangat Tidak Setuju", "score": 1},
       {"text": "Tidak Setuju", "score": 3},
@@ -49,7 +31,7 @@ final List pretestSikap = [
   },
   {
     'questionText':
-        'Mengkonsumsi makanan bergizi dengan pola seimbang hanya sekedar wacana ',
+        'Saya membagikan informasi tentang stunting terutama ke lingkungan sekitar, terutama lingkungan keluarga dan teman-teman ',
     'answers': [
       {"text": "Sangat Tidak Setuju", "score": 1},
       {"text": "Tidak Setuju", "score": 3},
@@ -59,7 +41,7 @@ final List pretestSikap = [
   },
   {
     'questionText':
-        'Menu makanan yang baik adalah makanan yang membuat kenyang tanpa perlu memiliki kandungan gizi yang lengkap ',
+        'Saya sudah mengkonsumsi tablet tambah darah secara rutin dan berkala sesuai anjuran. ',
     'answers': [
       {"text": "Sangat Tidak Setuju", "score": 1},
       {"text": "Tidak Setuju", "score": 3},
@@ -69,7 +51,7 @@ final List pretestSikap = [
   },
   {
     'questionText':
-        'Saya akan mengkonsumsi TTD secara rutin mulai dari sekarang ',
+        'Saya berusaha mengkonsumsi banyak sayuran dan cukup buah-buahan setiap hari ',
     'answers': [
       {"text": "Sangat Tidak Setuju", "score": 1},
       {"text": "Tidak Setuju", "score": 3},
@@ -79,16 +61,7 @@ final List pretestSikap = [
   },
   {
     'questionText':
-        'Saya ingin diet untuk menurunkan BB walaupun saya masih dalam masa pertumbuhan yang membutuhkan banyak zat gizi',
-    'answers': [
-      {"text": "Sangat Tidak Setuju", "score": 1},
-      {"text": "Tidak Setuju", "score": 3},
-      {"text": "Setuju", "score": 2},
-      {"text": "Sangat Setuju", "score": 4}
-    ],
-  },
-  {
-    'questionText': 'Makanan adalah penentu utama tinggi badan seseorang ',
+        'Saya tetap mengkonsumsi sayuran dan buah-buahan karena manfaatnya, walaupun saya kurang suka dengan rasanya ',
     'answers': [
       {"text": "Sangat Tidak Setuju", "score": 1},
       {"text": "Tidak Setuju", "score": 3},
@@ -98,7 +71,7 @@ final List pretestSikap = [
   },
   {
     'questionText':
-        'Saya akan membawa bekal makanan setiap hari ke sekolah Jika Sekolah dimulai kembali dengan normal ',
+        'Saya sudah terapkan pola makanan gizi seimbang untuk mencapai tinggi badan optimal dan status gizi baik ',
     'answers': [
       {"text": "Sangat Tidak Setuju", "score": 1},
       {"text": "Tidak Setuju", "score": 3},
@@ -108,7 +81,7 @@ final List pretestSikap = [
   },
   {
     'questionText':
-        'Status gizimu waktu remaja menjadi penentu status gizi anak cucumu nanti ',
+        'Saya membatasi konsumsi makanan instan dan jajanan manis, bersoda, asin dan berlemak',
     'answers': [
       {"text": "Sangat Tidak Setuju", "score": 1},
       {"text": "Tidak Setuju", "score": 3},
@@ -117,7 +90,7 @@ final List pretestSikap = [
     ],
   },
   {
-    'questionText': 'Gizi bukan merupakan faktor utama penyebab anak stunting',
+    'questionText': 'Saya rutin berolahraga 3x dalam satu minggu ',
     'answers': [
       {"text": "Sangat Tidak Setuju", "score": 1},
       {"text": "Tidak Setuju", "score": 3},
@@ -127,7 +100,7 @@ final List pretestSikap = [
   },
   {
     'questionText':
-        'Masa 1000 HPK adalah peluang utama untuk pencegahan stunting ',
+        'Saya minum air putih yang cukup (minimal 8 gelas) setiap hari',
     'answers': [
       {"text": "Sangat Tidak Setuju", "score": 1},
       {"text": "Tidak Setuju", "score": 3},
@@ -136,16 +109,8 @@ final List pretestSikap = [
     ],
   },
   {
-    'questionText': 'Peluang memutus siklus stunting ada pada saat masa remaja',
-    'answers': [
-      {"text": "Sangat Tidak Setuju", "score": 1},
-      {"text": "Tidak Setuju", "score": 3},
-      {"text": "Setuju", "score": 2},
-      {"text": "Sangat Setuju", "score": 4}
-    ],
-  },
-  {
-    'questionText': 'Peluang memutus siklus stunting ada pada saat masa remaja',
+    'questionText':
+        'Saya mengkonsumsi susu untuk menunjang pertumbuhan tulang saya ',
     'answers': [
       {"text": "Sangat Tidak Setuju", "score": 1},
       {"text": "Tidak Setuju", "score": 3},
