@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:stunting/common/services.dart';
 import 'package:stunting/models/pretest_sikap.dart';
 import 'package:stunting/models/pretest_ganda.dart';
+import 'package:stunting/pages/menu.dart';
 import 'package:stunting/widgets/finished.dart';
 import 'package:stunting/widgets/quiz2.dart';
 
-class QuizScreen extends StatefulWidget {
-  const QuizScreen({Key? key}) : super(key: key);
+class PretestG extends StatefulWidget {
+  const PretestG({Key? key}) : super(key: key);
 
   @override
   // ignore: library_private_types_in_public_api
-  _QuizScreenState createState() => _QuizScreenState();
+  _PretestGState createState() => _PretestGState();
 }
 
-class _QuizScreenState extends State<QuizScreen> {
+class _PretestGState extends State<PretestG> {
   int _index = 0;
   int _totalScroe = 0;
   bool isFinish = false;
@@ -49,8 +51,15 @@ class _QuizScreenState extends State<QuizScreen> {
                 questions: pretestSikap,
               )
             : FinishScreen(
-                onPressed: () {
-                  _resetQuiz();
+                onPressed: () async {
+                  await AuthServices.nextMateri(1);
+                  // ignore: use_build_context_synchronously
+                  await Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const Menu(),
+                    ),
+                  );
                 },
                 totalScore: _totalScroe,
               ),

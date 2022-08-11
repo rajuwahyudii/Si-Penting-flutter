@@ -17,6 +17,7 @@ import 'package:stunting/pages/menu-and-articles/materi/materi4.dart';
 import 'package:stunting/pages/menu-and-articles/materi/materi5.dart';
 import 'package:stunting/pages/menu-and-articles/materi/materi6.dart';
 import 'package:stunting/pages/menu-and-articles/materi/materi7.dart';
+import 'package:stunting/pages/menu-and-articles/materi/pretest_g_menu.dart';
 import 'package:stunting/pages/quiz/quis2.dart';
 import 'package:stunting/pages/quiz/start_quiz.dart';
 import 'package:stunting/theme/color.dart';
@@ -195,13 +196,14 @@ class _MenuState extends State<Menu> {
                               children: [
                                 if (materi > -1)
                                   MateriMenu(
-                                    title: 'Pre Test',
+                                    title: 'Pre Test (Ganda)',
                                     isDone: materi != 0 ? true : false,
                                     press: () {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) => const Materi1(),
+                                          builder: (context) =>
+                                              const PretestGMenu(),
                                         ),
                                       );
                                     },

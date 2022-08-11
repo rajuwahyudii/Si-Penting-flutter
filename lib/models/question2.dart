@@ -1,3 +1,4 @@
+// ignore: camel_case_types,
 class questions2 {
   final String question;
   final String answer;

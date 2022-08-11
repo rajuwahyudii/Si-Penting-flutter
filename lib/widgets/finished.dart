@@ -11,13 +11,13 @@ class FinishScreen extends StatelessWidget {
   String get resultPhrase {
     String resultText;
     if (totalScore <= 10) {
-      resultText = "You are awesome!";
+      resultText = "Luar biasa!";
     } else if (totalScore <= 15) {
-      resultText = "Pretty Likeable!";
+      resultText = "Keren!";
     } else if (totalScore <= 20) {
-      resultText = "You Are so ... Strange?!";
+      resultText = "Kerja Bagus!";
     } else {
-      resultText = "You Are so ...!";
+      resultText = "Amazing!";
     }
     return resultText;
   }

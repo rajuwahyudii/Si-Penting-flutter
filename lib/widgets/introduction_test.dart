@@ -1,0 +1,46 @@
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+class IntroductionTest extends StatelessWidget {
+  String introduction;
+  IntroductionTest({
+    required this.introduction,
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: <Widget>[
+        Image.asset(
+          'assets/images/teacher.png',
+          width: 350,
+        ),
+        Container(
+          padding: const EdgeInsets.all(20.0),
+          child: Text(
+            introduction,
+            style: GoogleFonts.poppins(
+              fontSize: 18,
+              color: Colors.white,
+              fontWeight: FontWeight.w400,
+            ),
+            textAlign: TextAlign.justify,
+          ),
+        ),
+        const SizedBox(
+          height: 50,
+          child: Align(
+            alignment: Alignment.centerRight,
+            child: Icon(
+              Icons.arrow_right_alt_outlined,
+              color: Colors.white,
+              size: 50,
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
