@@ -17,7 +17,7 @@ import 'package:stunting/pages/menu-and-articles/materi/materi4.dart';
 import 'package:stunting/pages/menu-and-articles/materi/materi5.dart';
 import 'package:stunting/pages/menu-and-articles/materi/materi6.dart';
 import 'package:stunting/pages/menu-and-articles/materi/materi7.dart';
-import 'package:stunting/pages/quiz/quiz.dart';
+import 'package:stunting/pages/quiz/quis2.dart';
 import 'package:stunting/pages/quiz/start_quiz.dart';
 import 'package:stunting/theme/color.dart';
 import 'package:stunting/widgets/article_menu.dart';
@@ -75,14 +75,6 @@ class _MenuState extends State<Menu> {
                           ),
                         ),
                       );
-                  // ignore: use_build_context_synchronously
-                  await Navigator.pushAndRemoveUntil(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const Quiz(),
-                        maintainState: true),
-                    (Route<dynamic> route) => false,
-                  );
                 },
               ),
               backgroundColor: backgroundColor,
@@ -319,7 +311,7 @@ class _MenuState extends State<Menu> {
                                                 context,
                                                 MaterialPageRoute(
                                                   builder: (context) =>
-                                                      const Quiz(),
+                                                      const QuizScreen(),
                                                 ),
                                               );
                                             },

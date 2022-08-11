@@ -1,9 +1,8 @@
 import "package:flutter/material.dart";
 import 'package:google_fonts/google_fonts.dart';
-import 'package:stunting/theme/color.dart';
 
 class Soal extends StatefulWidget {
-  Soal({Key? key}) : super(key: key);
+  const Soal({Key? key}) : super(key: key);
 
   @override
   State<Soal> createState() => _SoalState();
