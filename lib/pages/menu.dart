@@ -17,11 +17,13 @@ import 'package:stunting/pages/menu-and-articles/materi/materi4.dart';
 import 'package:stunting/pages/menu-and-articles/materi/materi5.dart';
 import 'package:stunting/pages/menu-and-articles/materi/materi6.dart';
 import 'package:stunting/pages/menu-and-articles/materi/materi7.dart';
+import 'package:stunting/pages/menu-and-articles/materi/postest_esai_menu.dart';
+import 'package:stunting/pages/menu-and-articles/materi/postest_g_menu.dart';
+import 'package:stunting/pages/menu-and-articles/materi/postest_prilaku.dart';
+import 'package:stunting/pages/menu-and-articles/materi/postest_sikap_menu.dart';
 import 'package:stunting/pages/menu-and-articles/materi/pretest_g_menu.dart';
 import 'package:stunting/pages/menu-and-articles/materi/pretest_prilaku_menu.dart';
 import 'package:stunting/pages/menu-and-articles/materi/pretest_sikap_menu.dart';
-import 'package:stunting/pages/quiz/quis2.dart';
-import 'package:stunting/pages/quiz/start_quiz.dart';
 import 'package:stunting/theme/color.dart';
 import 'package:stunting/widgets/article_menu.dart';
 import 'package:stunting/widgets/materi_menu.dart';
@@ -345,28 +347,60 @@ class _MenuState extends State<Menu> {
                                   ),
                                 if (materi > 11)
                                   MateriMenu(
-                                    title: 'Post Test',
+                                    title: 'Post Test (Ganda)',
                                     isDone: materi != 12 ? true : false,
                                     press: () {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) => StartQuiz(
-                                            press: () {
-                                              Navigator.pushReplacement(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      const QuizScreen(),
-                                                ),
-                                              );
-                                            },
-                                            text: 'Start Quiz',
-                                          ),
+                                          builder: (context) =>
+                                              const PostestGMenu(),
                                         ),
                                       );
                                     },
-                                  )
+                                  ),
+                                if (materi > 12)
+                                  MateriMenu(
+                                    title: 'Post Test (Esai)',
+                                    isDone: materi != 13 ? true : false,
+                                    press: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              const PostestEsaiMenu(),
+                                        ),
+                                      );
+                                    },
+                                  ),
+                                if (materi > 13)
+                                  MateriMenu(
+                                    title: 'Post Test (Sikap)',
+                                    isDone: materi != 14 ? true : false,
+                                    press: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              const PostestSikapMenu(),
+                                        ),
+                                      );
+                                    },
+                                  ),
+                                if (materi > 14)
+                                  MateriMenu(
+                                    title: 'Post Test (Prilaku)',
+                                    isDone: materi != 15 ? true : false,
+                                    press: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              const PostestPrilakuMenu(),
+                                        ),
+                                      );
+                                    },
+                                  ),
                               ],
                             ),
                     )

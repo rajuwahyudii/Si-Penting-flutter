@@ -5,15 +5,15 @@ import 'package:stunting/pages/menu.dart';
 import 'package:stunting/widgets/finished.dart';
 import 'package:stunting/widgets/quiz2.dart';
 
-class PostestG extends StatefulWidget {
-  const PostestG({Key? key}) : super(key: key);
+class PretestEsai extends StatefulWidget {
+  const PretestEsai({Key? key}) : super(key: key);
 
   @override
   // ignore: library_private_types_in_public_api
-  _PostestGState createState() => _PostestGState();
+  _PretestEsaiState createState() => _PretestEsaiState();
 }
 
-class _PostestGState extends State<PostestG> {
+class _PretestEsaiState extends State<PretestEsai> {
   int _index = 0;
   int _totalScroe = 0;
   bool isFinish = false;
@@ -51,7 +51,7 @@ class _PostestGState extends State<PostestG> {
               )
             : FinishScreen(
                 onPressed: () async {
-                  await AuthServices.nextMateri(13);
+                  await AuthServices.nextMateri(2);
                   // ignore: use_build_context_synchronously
                   await Navigator.push(
                     context,
