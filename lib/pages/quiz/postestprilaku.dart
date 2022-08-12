@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:stunting/common/services.dart';
 import 'package:stunting/models/pretest_ganda.dart';
+import 'package:stunting/models/pretest_prilaku.dart';
 import 'package:stunting/pages/menu.dart';
 import 'package:stunting/widgets/finished.dart';
 import 'package:stunting/widgets/quiz2.dart';
@@ -23,7 +24,7 @@ class _PostestPrilakuState extends State<PostestPrilaku> {
     setState(() {
       _index++;
     });
-    if (_index < pretestGanda.length) {
+    if (_index < pretestPrilaku.length) {
       isFinish = false;
     } else {
       isFinish = true;
@@ -47,7 +48,7 @@ class _PostestPrilakuState extends State<PostestPrilaku> {
             ? Quiz(
                 index: _index,
                 questionsAnswer: _questionsAnswer,
-                questions: pretestGanda,
+                questions: pretestPrilaku,
               )
             : FinishScreen(
                 onPressed: () async {

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:stunting/common/services.dart';
 import 'package:stunting/models/pretest_ganda.dart';
+import 'package:stunting/models/pretest_sikap.dart';
 import 'package:stunting/pages/menu.dart';
 import 'package:stunting/widgets/finished.dart';
 import 'package:stunting/widgets/quiz2.dart';
@@ -23,7 +24,7 @@ class _PostestSikapState extends State<PostestSikap> {
     setState(() {
       _index++;
     });
-    if (_index < pretestGanda.length) {
+    if (_index < pretestSikap.length) {
       isFinish = false;
     } else {
       isFinish = true;
@@ -47,7 +48,7 @@ class _PostestSikapState extends State<PostestSikap> {
             ? Quiz(
                 index: _index,
                 questionsAnswer: _questionsAnswer,
-                questions: pretestGanda,
+                questions: pretestSikap,
               )
             : FinishScreen(
                 onPressed: () async {
