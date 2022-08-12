@@ -35,7 +35,6 @@ class _Materi3State extends State<Materi3> {
           Map<String, dynamic> data =
               snapshot.data!.data() as Map<String, dynamic>;
 
-          var role = '${data['role']}';
           var materi = int.parse('${data['class']}');
           return Scaffold(
             backgroundColor: backgroundColor,

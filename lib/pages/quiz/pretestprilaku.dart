@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:stunting/common/services.dart';
-import 'package:stunting/models/pretest_ganda.dart';
 import 'package:stunting/models/pretest_prilaku.dart';
 import 'package:stunting/pages/menu.dart';
 import 'package:stunting/widgets/finished.dart';
@@ -31,19 +30,11 @@ class _PretestPrilakuState extends State<PretestPrilaku> {
     }
   }
 
-  void _resetQuiz() {
-    setState(() {
-      isFinish = false;
-      _index = 0;
-      _totalScroe = 0;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color.fromARGB(255, 46, 143, 228),
+        backgroundColor: const Color.fromARGB(255, 46, 143, 228),
         body: isFinish == false
             ? Quiz(
                 index: _index,

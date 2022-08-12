@@ -4,6 +4,7 @@ import 'package:stunting/pages/menu.dart';
 import 'package:stunting/theme/color.dart';
 import 'package:stunting/widgets/animation.dart';
 
+// ignore: must_be_immutable
 class DoneTest extends StatelessWidget {
   String introduction;
   DoneTest({

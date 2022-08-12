@@ -4,7 +4,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:stunting/pages/quiz/postestprilaku.dart';
-import 'package:stunting/pages/quiz/pretestg.dart';
 import 'package:stunting/theme/color.dart';
 import 'package:stunting/widgets/done_test.dart';
 import 'package:stunting/widgets/end_of_materi.dart';

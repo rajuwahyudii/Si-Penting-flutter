@@ -30,19 +30,11 @@ class _PostestGState extends State<PostestG> {
     }
   }
 
-  void _resetQuiz() {
-    setState(() {
-      isFinish = false;
-      _index = 0;
-      _totalScroe = 0;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color.fromARGB(255, 46, 143, 228),
+        backgroundColor: const Color.fromARGB(255, 46, 143, 228),
         body: isFinish == false
             ? Quiz(
                 index: _index,

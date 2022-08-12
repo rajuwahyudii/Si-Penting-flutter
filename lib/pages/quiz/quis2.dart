@@ -41,7 +41,7 @@ class _QuizScreenState extends State<QuizScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color.fromARGB(255, 46, 143, 228),
+        backgroundColor: const Color.fromARGB(255, 46, 143, 228),
         body: isFinish == false
             ? Quiz(
                 index: _index,

@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class AnswerCards extends StatelessWidget {
   dynamic ontap;
   String answerText;
 
   AnswerCards({
+    Key? key,
     required this.ontap,
     required this.answerText,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,8 +18,8 @@ class AnswerCards extends StatelessWidget {
     return GestureDetector(
       onTap: ontap,
       child: Container(
-        margin: EdgeInsets.all(5),
-        padding: EdgeInsets.all(15),
+        margin: const EdgeInsets.all(5),
+        padding: const EdgeInsets.all(15),
         width: width,
         height: height / 9,
         // ignore: sort_child_properties_last

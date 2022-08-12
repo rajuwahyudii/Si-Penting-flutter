@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:stunting/theme/color.dart';
 import 'package:stunting/widgets/animation.dart';
 
+// ignore: must_be_immutable
 class FinishScreen extends StatelessWidget {
   VoidCallback onPressed;
   int totalScore;
-  FinishScreen({required this.onPressed, required this.totalScore});
+  FinishScreen({
+    Key? key,
+    required this.onPressed,
+    required this.totalScore,
+  }) : super(key: key);
   String get resultPhrase {
     String resultText;
     if (totalScore <= 10) {
