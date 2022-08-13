@@ -43,6 +43,7 @@ class _PretestGState extends State<PretestG> {
               )
             : FinishScreen(
                 onPressed: () async {
+                  await AuthServices.HasilPretestGanda(_totalScroe);
                   await AuthServices.nextMateri(2);
                   // ignore: use_build_context_synchronously
                   await Navigator.push(

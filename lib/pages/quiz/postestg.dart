@@ -44,6 +44,7 @@ class _PostestGState extends State<PostestG> {
             : FinishScreen(
                 onPressed: () async {
                   await AuthServices.nextMateri(13);
+                  await AuthServices.HasilPostestGanda(_totalScroe);
                   // ignore: use_build_context_synchronously
                   await Navigator.push(
                     context,

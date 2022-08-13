@@ -65,6 +65,78 @@ class AuthServices {
     }
   }
 
+  static Future<User?> HasilPretestGanda(
+    int score,
+  ) async {
+    try {
+      await FirebaseFirestore.instance.collection('user').doc(user.uid).update({
+        'score pretest ganda': score,
+      });
+    } catch (e) {
+      print(e);
+    }
+  }
+
+  static Future<User?> HasilPretestSikap(
+    int score,
+  ) async {
+    try {
+      await FirebaseFirestore.instance.collection('user').doc(user.uid).update({
+        'score pretest sikap': score,
+      });
+    } catch (e) {
+      print(e);
+    }
+  }
+
+  static Future<User?> HasilPretestPrilaku(
+    int score,
+  ) async {
+    try {
+      await FirebaseFirestore.instance.collection('user').doc(user.uid).update({
+        'score pretest prilaku': score,
+      });
+    } catch (e) {
+      print(e);
+    }
+  }
+
+  static Future<User?> HasilPostestPrilaku(
+    int score,
+  ) async {
+    try {
+      await FirebaseFirestore.instance.collection('user').doc(user.uid).update({
+        'score postest prilaku': score,
+      });
+    } catch (e) {
+      print(e);
+    }
+  }
+
+  static Future<User?> HasilPostestGanda(
+    int score,
+  ) async {
+    try {
+      await FirebaseFirestore.instance.collection('user').doc(user.uid).update({
+        'score postest ganda': score,
+      });
+    } catch (e) {
+      print(e);
+    }
+  }
+
+  static Future<User?> HasilPostestSikap(
+    int score,
+  ) async {
+    try {
+      await FirebaseFirestore.instance.collection('user').doc(user.uid).update({
+        'score postest sikap': score,
+      });
+    } catch (e) {
+      print(e);
+    }
+  }
+
   //logout
   // ignore: body_might_complete_normally_nullable
   static Future<User?> signOut() async {

@@ -44,6 +44,7 @@ class _PostestSikapState extends State<PostestSikap> {
             : FinishScreen(
                 onPressed: () async {
                   await AuthServices.nextMateri(15);
+                  await AuthServices.HasilPostestSikap(_totalScroe);
                   // ignore: use_build_context_synchronously
                   await Navigator.push(
                     context,

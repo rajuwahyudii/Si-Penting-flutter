@@ -44,6 +44,7 @@ class _PretestPrilakuState extends State<PretestPrilaku> {
             : FinishScreen(
                 onPressed: () async {
                   await AuthServices.nextMateri(5);
+                  await AuthServices.HasilPretestPrilaku(_totalScroe);
                   // ignore: use_build_context_synchronously
                   await Navigator.push(
                     context,
