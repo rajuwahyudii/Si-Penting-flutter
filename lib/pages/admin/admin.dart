@@ -64,14 +64,8 @@ class _AdminPageState extends State<AdminPage> {
                 ),
                 AdminMenusWidget(
                   url: 'assets/images/question.png',
-                  text: 'Pertanyaan',
-                  press: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => const ArtikelAdmin(),
-                      ),
-                    );
-                  },
+                  text: 'Esai',
+                  press: () {},
                 ),
               ],
             )

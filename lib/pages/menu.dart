@@ -25,7 +25,8 @@ import 'package:stunting/pages/menu-and-articles/materi/pretest_esai_menu.dart';
 import 'package:stunting/pages/menu-and-articles/materi/pretest_g_menu.dart';
 import 'package:stunting/pages/menu-and-articles/materi/pretest_prilaku_menu.dart';
 import 'package:stunting/pages/menu-and-articles/materi/pretest_sikap_menu.dart';
-import 'package:stunting/pages/quiz/pretestesai.dart';
+import 'package:stunting/pages/quiz/raport.dart';
+
 import 'package:stunting/theme/color.dart';
 import 'package:stunting/widgets/article_menu.dart';
 import 'package:stunting/widgets/materi_menu.dart';
@@ -405,14 +406,13 @@ class _MenuState extends State<Menu> {
                                   ),
                                 if (materi > 15)
                                   MateriMenu(
-                                    title: 'Raport',
+                                    title: 'Hasil',
                                     isDone: materi != 16 ? true : false,
                                     press: () {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) =>
-                                              const PostestPrilakuMenu(),
+                                          builder: (context) => Raport(),
                                         ),
                                       );
                                     },
