@@ -125,6 +125,54 @@ class AuthServices {
     }
   }
 
+  static Future<User?> PretestEsai1(
+    String jawaban,
+  ) async {
+    try {
+      await FirebaseFirestore.instance.collection('user').doc(user.uid).update({
+        'pretest esai1': jawaban,
+      });
+    } catch (e) {
+      print(e);
+    }
+  }
+
+  static Future<User?> PretestEsai2(
+    String jawaban,
+  ) async {
+    try {
+      await FirebaseFirestore.instance.collection('user').doc(user.uid).update({
+        'pretest esai2': jawaban,
+      });
+    } catch (e) {
+      print(e);
+    }
+  }
+
+  static Future<User?> PostestEsai1(
+    String jawaban,
+  ) async {
+    try {
+      await FirebaseFirestore.instance.collection('user').doc(user.uid).update({
+        'postest esai1': jawaban,
+      });
+    } catch (e) {
+      print(e);
+    }
+  }
+
+  static Future<User?> PostestEsai2(
+    String jawaban,
+  ) async {
+    try {
+      await FirebaseFirestore.instance.collection('user').doc(user.uid).update({
+        'postest esai2': jawaban,
+      });
+    } catch (e) {
+      print(e);
+    }
+  }
+
   static Future<User?> HasilPostestSikap(
     int score,
   ) async {

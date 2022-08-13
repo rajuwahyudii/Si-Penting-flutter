@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:stunting/common/services.dart';
+import 'package:stunting/models/pretest_esai.dart';
 import 'package:stunting/models/pretest_ganda.dart';
 import 'package:stunting/pages/menu.dart';
+import 'package:stunting/theme/color.dart';
 import 'package:stunting/widgets/finished.dart';
+import 'package:stunting/widgets/finishscreen_esai.dart';
 import 'package:stunting/widgets/quiz2.dart';
+import 'package:stunting/widgets/quiz_esai.dart';
 
 class PretestEsai extends StatefulWidget {
   const PretestEsai({Key? key}) : super(key: key);
@@ -14,47 +19,119 @@ class PretestEsai extends StatefulWidget {
 }
 
 class _PretestEsaiState extends State<PretestEsai> {
-  int _index = 0;
-  int _totalScroe = 0;
-  bool isFinish = false;
-  _questionsAnswer(int score) {
-    _totalScroe += score;
-
-    setState(() {
-      _index++;
-    });
-    if (_index < pretestGanda.length) {
-      isFinish = false;
-    } else {
-      isFinish = true;
-    }
-  }
-
+  int _index = 1;
+  TextEditingController _controller1 = TextEditingController();
+  TextEditingController _controller2 = TextEditingController();
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return SafeArea(
       child: Scaffold(
-        backgroundColor: const Color.fromARGB(255, 46, 143, 228),
-        body: isFinish == false
-            ? Quiz(
-                index: _index,
-                questionsAnswer: _questionsAnswer,
-                questions: pretestGanda,
-              )
-            : FinishScreen(
-                onPressed: () async {
-                  await AuthServices.nextMateri(2);
-                  // ignore: use_build_context_synchronously
-                  await Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const Menu(),
+          backgroundColor: const Color.fromARGB(255, 46, 143, 228),
+          body: Container(
+            margin: EdgeInsets.all(20),
+            child: SingleChildScrollView(
+              child: _index < 3
+                  ? Column(children: [
+                      Container(
+                        height: size.height / 3,
+                        width: size.width,
+                        padding: EdgeInsets.all(5),
+                        // ignore: sort_child_properties_last
+                        child: Center(
+                          child: _index > 0 && _index == 1
+                              ? const Text(
+                                  'Menurut anda, apa yang dimaksud dengan stunting?',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w300),
+                                )
+                              : const Text(
+                                  'Menurut anda, bagaimana seseorang dikatakan stunting',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w300),
+                                ),
+                        ),
+                        decoration: BoxDecoration(
+                          color: Color(0xF62975D0),
+                          borderRadius: BorderRadius.circular(
+                            20,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      TextFormField(
+                        keyboardType: TextInputType.name,
+                        maxLength: 100,
+                        controller: _index == 1 ? _controller1 : _controller2,
+                        decoration: InputDecoration(
+                          floatingLabelAlignment: FloatingLabelAlignment.center,
+                          floatingLabelBehavior: FloatingLabelBehavior.auto,
+                          alignLabelWithHint: true,
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(17),
+                          ),
+                          fillColor: Colors.white70,
+                          filled: true,
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      ElevatedButton(
+                        // ignore: sort_child_properties_last
+                        child: Text(
+                          'Submit',
+                          style: GoogleFonts.poppins(
+                            fontWeight: FontWeight.w400,
+                            fontSize: 22,
+                            color: Colors.black,
+                          ),
+                        ),
+                        // ignore: unnecessary_null_comparison
+                        onPressed: () async {
+                          _index == 1
+                              ? await AuthServices.PretestEsai1(
+                                  _controller1.text)
+                              : await AuthServices.PretestEsai2(
+                                  _controller2.text);
+                          setState(() {
+                            _index++;
+                          });
+                        },
+                        style: ElevatedButton.styleFrom(
+                          primary: yellowButtonColor,
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 40, vertical: 20),
+                          textStyle: GoogleFonts.poppins(
+                            color: Colors.black,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                    ])
+                  : FinishScreenEsai(
+                      onPressed: () async {
+                        await AuthServices.nextMateri(3);
+                        // ignore: use_build_context_synchronously
+                        await Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Menu(),
+                          ),
+                        );
+                      },
                     ),
-                  );
-                },
-                totalScore: _totalScroe,
-              ),
-      ),
+            ),
+          )),
     );
   }
 }

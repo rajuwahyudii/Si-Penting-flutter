@@ -4,7 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:stunting/pages/menu.dart';
-import 'package:stunting/pages/quiz/pretestg.dart';
+import 'package:stunting/pages/quiz/pretestesai.dart';
 import 'package:stunting/theme/color.dart';
 import 'package:stunting/widgets/done_test.dart';
 import 'package:stunting/widgets/end_of_materi.dart';
@@ -53,7 +53,7 @@ class _PretestEsaiMenuState extends State<PretestEsaiMenu> {
               ),
               backgroundColor: backgroundColor,
               title: Text(
-                'Pretest Pilihan Ganda',
+                'Pretest Esai',
                 style: GoogleFonts.poppins(
                   fontSize: 23,
                   fontWeight: FontWeight.w600,
@@ -68,16 +68,16 @@ class _PretestEsaiMenuState extends State<PretestEsaiMenu> {
               child: PageView(
                 controller: pageController,
                 children: <Widget>[
-                  if (materi > 1)
+                  if (materi > 2)
                     DoneTest(
                         introduction:
-                            'Kamu Telah Menyelesaikan\n Pretest Pilihan Ganda'),
-                  if (materi < 2)
+                            'Kamu Telah Menyelesaikan\n Pretest Esai'),
+                  if (materi < 3)
                     IntroductionTest(
                       introduction:
                           'Pilihlah jawaban yang paling kamu anggap benar! Isilah secara jujur karena ini tidak akan mempengaruhi nilai kamu atau apapun. ini hanya untuk melihat gambaran pengetahuan kamu sebelum terpapar dengan materi di dalam aplikasi.',
                     ),
-                  if (materi < 2)
+                  if (materi < 3)
                     EndOfMateri(
                       text: 'Mulai',
                       press: () async {
@@ -85,7 +85,7 @@ class _PretestEsaiMenuState extends State<PretestEsaiMenu> {
                         await Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const PretestG(),
+                            builder: (context) => const PretestEsai(),
                           ),
                         );
                       },

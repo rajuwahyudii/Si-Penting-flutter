@@ -403,6 +403,20 @@ class _MenuState extends State<Menu> {
                                       );
                                     },
                                   ),
+                                if (materi > 15)
+                                  MateriMenu(
+                                    title: 'Raport',
+                                    isDone: materi != 16 ? true : false,
+                                    press: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              const PostestPrilakuMenu(),
+                                        ),
+                                      );
+                                    },
+                                  ),
                               ],
                             ),
                     )
