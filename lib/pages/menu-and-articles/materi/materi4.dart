@@ -43,7 +43,14 @@ class _Materi4State extends State<Materi4> {
                 icon: const Icon(
                   Icons.arrow_back,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const Menu(),
+                    ),
+                  );
+                },
               ),
               backgroundColor: backgroundColor,
               title: Text(

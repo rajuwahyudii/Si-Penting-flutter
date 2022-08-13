@@ -3,6 +3,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
+import 'package:stunting/pages/menu.dart';
 import 'package:stunting/pages/quiz/postestprilaku.dart';
 import 'package:stunting/theme/color.dart';
 import 'package:stunting/widgets/done_test.dart';
@@ -41,7 +42,14 @@ class _PostestPrilakuMenuState extends State<PostestPrilakuMenu> {
                 icon: const Icon(
                   Icons.arrow_back,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const Menu(),
+                    ),
+                  );
+                },
               ),
               backgroundColor: backgroundColor,
               title: Text(
@@ -63,7 +71,7 @@ class _PostestPrilakuMenuState extends State<PostestPrilakuMenu> {
                   if (materi > 15)
                     DoneTest(
                         introduction:
-                            'Kamu Telah Menyelesaikan\n Pretest Pilihan Ganda'),
+                            'Kamu Telah Menyelesaikan\n Postest Pilihan Prilaku'),
                   if (materi < 16)
                     IntroductionTest(
                       introduction:

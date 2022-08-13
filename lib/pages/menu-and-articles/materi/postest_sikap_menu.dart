@@ -3,6 +3,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
+import 'package:stunting/pages/menu.dart';
 import 'package:stunting/pages/quiz/postestsikap.dart';
 import 'package:stunting/theme/color.dart';
 import 'package:stunting/widgets/done_test.dart';
@@ -41,11 +42,18 @@ class _PostestSikapMenuState extends State<PostestSikapMenu> {
                 icon: const Icon(
                   Icons.arrow_back,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const Menu(),
+                    ),
+                  );
+                },
               ),
               backgroundColor: backgroundColor,
               title: Text(
-                'Pretest Pilihan Ganda',
+                'Postest Pilihan Sikap',
                 style: GoogleFonts.poppins(
                   fontSize: 23,
                   fontWeight: FontWeight.w600,
@@ -63,7 +71,7 @@ class _PostestSikapMenuState extends State<PostestSikapMenu> {
                   if (materi > 14)
                     DoneTest(
                         introduction:
-                            'Kamu Telah Menyelesaikan\n Pretest Pilihan Ganda'),
+                            'Kamu Telah Menyelesaikan\n Postest Pilihan Sikap'),
                   if (materi < 15)
                     IntroductionTest(
                       introduction:

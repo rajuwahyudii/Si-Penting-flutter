@@ -21,9 +21,11 @@ import 'package:stunting/pages/menu-and-articles/materi/postest_esai_menu.dart';
 import 'package:stunting/pages/menu-and-articles/materi/postest_g_menu.dart';
 import 'package:stunting/pages/menu-and-articles/materi/postest_prilaku.dart';
 import 'package:stunting/pages/menu-and-articles/materi/postest_sikap_menu.dart';
+import 'package:stunting/pages/menu-and-articles/materi/pretest_esai_menu.dart';
 import 'package:stunting/pages/menu-and-articles/materi/pretest_g_menu.dart';
 import 'package:stunting/pages/menu-and-articles/materi/pretest_prilaku_menu.dart';
 import 'package:stunting/pages/menu-and-articles/materi/pretest_sikap_menu.dart';
+import 'package:stunting/pages/quiz/pretestesai.dart';
 import 'package:stunting/theme/color.dart';
 import 'package:stunting/widgets/article_menu.dart';
 import 'package:stunting/widgets/materi_menu.dart';
@@ -221,7 +223,7 @@ class _MenuState extends State<Menu> {
                                         context,
                                         MaterialPageRoute(
                                           builder: (context) =>
-                                              const PretestGMenu(),
+                                              const PretestEsaiMenu(),
                                         ),
                                       );
                                     },
