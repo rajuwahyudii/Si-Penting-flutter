@@ -26,6 +26,7 @@ import 'package:stunting/pages/menu-and-articles/materi/pretest_g_menu.dart';
 import 'package:stunting/pages/menu-and-articles/materi/pretest_prilaku_menu.dart';
 import 'package:stunting/pages/menu-and-articles/materi/pretest_sikap_menu.dart';
 import 'package:stunting/pages/quiz/raport.dart';
+import 'package:stunting/pages/wrapper.dart';
 
 import 'package:stunting/theme/color.dart';
 import 'package:stunting/widgets/article_menu.dart';
@@ -83,6 +84,12 @@ class _MenuState extends State<Menu> {
                           ),
                         ),
                       );
+                  await Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Wrapper(),
+                    ),
+                  );
                 },
               ),
               backgroundColor: backgroundColor,
