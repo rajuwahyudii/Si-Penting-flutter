@@ -2,18 +2,17 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
-import 'package:stunting/pages/admin/esaisemua.dart';
 import 'package:stunting/pages/admin/hasil_semua.dart';
 import 'package:stunting/theme/color.dart';
 
-class ListEsai extends StatefulWidget {
-  ListEsai({Key? key}) : super(key: key);
+class ListScore extends StatefulWidget {
+  ListScore({Key? key}) : super(key: key);
 
   @override
-  State<ListEsai> createState() => _ListEsaiState();
+  State<ListScore> createState() => _ListScoreState();
 }
 
-class _ListEsaiState extends State<ListEsai> {
+class _ListScoreState extends State<ListScore> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -45,7 +44,7 @@ class _ListEsaiState extends State<ListEsai> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => EsaiSemua(id: doc['id']),
+                          builder: (context) => HasilSemua(id: doc['id']),
                         ),
                       );
                     },

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:stunting/pages/admin/artikel_admin.dart';
+import 'package:stunting/pages/admin/listesai.dart';
+import 'package:stunting/pages/admin/listscore.dart';
 import 'package:stunting/pages/menu.dart';
 import 'package:stunting/theme/color.dart';
 import 'package:stunting/widgets/admin_menus.dart';
@@ -60,12 +62,26 @@ class _AdminPageState extends State<AdminPage> {
                 AdminMenusWidget(
                   url: 'assets/images/score.png',
                   text: 'Score',
-                  press: () {},
+                  press: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ListScore(),
+                      ),
+                    );
+                  },
                 ),
                 AdminMenusWidget(
                   url: 'assets/images/question.png',
                   text: 'Esai',
-                  press: () {},
+                  press: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ListEsai(),
+                      ),
+                    );
+                  },
                 ),
               ],
             )

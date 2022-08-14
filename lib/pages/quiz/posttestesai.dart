@@ -29,14 +29,14 @@ class _PostestEsaiState extends State<PostestEsai> {
       child: Scaffold(
           backgroundColor: const Color.fromARGB(255, 46, 143, 228),
           body: Container(
-            margin: EdgeInsets.all(20),
+            margin: const EdgeInsets.all(20),
             child: SingleChildScrollView(
               child: _index < 3
                   ? Column(children: [
                       Container(
                         height: size.height / 3,
                         width: size.width,
-                        padding: EdgeInsets.all(5),
+                        padding: const EdgeInsets.all(5),
                         // ignore: sort_child_properties_last
                         child: Center(
                           child: _index > 0 && _index == 1

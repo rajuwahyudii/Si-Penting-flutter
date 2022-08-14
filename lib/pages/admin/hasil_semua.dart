@@ -4,30 +4,26 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:stunting/common/services.dart';
+import 'package:stunting/pages/admin/admin.dart';
 import 'package:stunting/pages/menu.dart';
 import 'package:stunting/theme/color.dart';
 import 'package:stunting/widgets/end_of_materi.dart';
 import 'package:stunting/widgets/text_article_widget.dart';
 import 'package:stunting/widgets/tittle_article_widget.dart';
 
-class Raport extends StatefulWidget {
-  const Raport({Key? key}) : super(key: key);
-
-  @override
-  State<Raport> createState() => _RaportState();
-}
-
-class _RaportState extends State<Raport> {
-  PageController pageController = PageController();
-  static FirebaseAuth auth = FirebaseAuth.instance;
-  static User user = auth.currentUser!;
+class HasilSemua extends StatelessWidget {
+  String id;
+  HasilSemua({
+    required this.id,
+    Key? key,
+  }) : super(key: key);
   CollectionReference collectionRef =
       FirebaseFirestore.instance.collection('user');
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return FutureBuilder<DocumentSnapshot>(
-      future: collectionRef.doc(user.uid).get(),
+      future: collectionRef.doc(id).get(),
       builder:
           (BuildContext context, AsyncSnapshot<DocumentSnapshot> snapshot) {
         if (snapshot.connectionState == ConnectionState.done) {
@@ -45,12 +41,7 @@ class _RaportState extends State<Raport> {
                   Icons.arrow_back,
                 ),
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const Menu(),
-                    ),
-                  );
+                  Navigator.pop(context);
                 },
               ),
               backgroundColor: backgroundColor,
