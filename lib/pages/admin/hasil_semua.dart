@@ -1,15 +1,10 @@
+// ignore_for_file: non_constant_identifier_names, must_be_immutable
+
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
-import 'package:stunting/common/services.dart';
-import 'package:stunting/pages/admin/admin.dart';
-import 'package:stunting/pages/menu.dart';
 import 'package:stunting/theme/color.dart';
-import 'package:stunting/widgets/end_of_materi.dart';
-import 'package:stunting/widgets/text_article_widget.dart';
-import 'package:stunting/widgets/tittle_article_widget.dart';
 
 class HasilSemua extends StatelessWidget {
   String id;

@@ -1,14 +1,11 @@
+// ignore_for_file: prefer_final_fields, prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:stunting/common/services.dart';
-import 'package:stunting/models/pretest_esai.dart';
-import 'package:stunting/models/pretest_ganda.dart';
 import 'package:stunting/pages/menu.dart';
 import 'package:stunting/theme/color.dart';
-import 'package:stunting/widgets/finished.dart';
 import 'package:stunting/widgets/finishscreen_esai.dart';
-import 'package:stunting/widgets/quiz2.dart';
-import 'package:stunting/widgets/quiz_esai.dart';
 
 class PostestEsai extends StatefulWidget {
   const PostestEsai({Key? key}) : super(key: key);

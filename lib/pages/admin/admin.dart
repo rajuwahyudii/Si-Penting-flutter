@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:stunting/pages/admin/artikel_admin.dart';
 import 'package:stunting/pages/admin/listesai.dart';
 import 'package:stunting/pages/admin/listscore.dart';
 import 'package:stunting/pages/menu.dart';

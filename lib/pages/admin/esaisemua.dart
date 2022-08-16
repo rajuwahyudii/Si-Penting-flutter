@@ -1,14 +1,12 @@
+// ignore_for_file: unused_local_variable, prefer_final_fields, sort_child_properties_last, prefer_const_constructors, use_build_context_synchronously
+
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:stunting/common/services.dart';
-import 'package:stunting/pages/admin/admin.dart';
-import 'package:stunting/pages/admin/listesai.dart';
 import 'package:stunting/theme/color.dart';
 import 'package:stunting/widgets/button.dart';
-import 'package:stunting/widgets/text_field.dart';
 
 // ignore: must_be_immutable
 class EsaiSemua extends StatelessWidget {
@@ -69,8 +67,8 @@ class EsaiSemua extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Container(
-                      padding: EdgeInsets.all(15),
-                      color: Color.fromARGB(255, 2, 34, 55),
+                      padding: const EdgeInsets.all(15),
+                      color: const Color.fromARGB(255, 2, 34, 55),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -90,7 +88,6 @@ class EsaiSemua extends StatelessWidget {
                             width: size.width * 0.9,
                             child: Text(
                                 'Menurut anda, apa yang dimaksud dengan stunting?'),
-                            // ignore: sort_child_properties_last
                             decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(
@@ -113,7 +110,6 @@ class EsaiSemua extends StatelessWidget {
                             padding: const EdgeInsets.all(15),
                             width: size.width * 0.9,
                             child: Text('${data['pretest esai1']}'),
-                            // ignore: sort_child_properties_last
                             decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(
@@ -136,7 +132,6 @@ class EsaiSemua extends StatelessWidget {
                             padding: const EdgeInsets.all(15),
                             width: size.width * 0.9,
                             child: Text('${data['postest esai1']}'),
-                            // ignore: sort_child_properties_last
                             decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(
@@ -175,7 +170,6 @@ class EsaiSemua extends StatelessWidget {
                             width: size.width * 0.9,
                             child: Text(
                                 'Menurut anda, bagaimana seseorang dikatakan stunting'),
-                            // ignore: sort_child_properties_last
                             decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(
@@ -198,7 +192,6 @@ class EsaiSemua extends StatelessWidget {
                             padding: const EdgeInsets.all(15),
                             width: size.width * 0.9,
                             child: Text('${data['pretest esai2']}'),
-                            // ignore: sort_child_properties_last
                             decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(
@@ -221,7 +214,6 @@ class EsaiSemua extends StatelessWidget {
                             padding: const EdgeInsets.all(15),
                             width: size.width * 0.9,
                             child: Text('${data['postest esai2']}'),
-                            // ignore: sort_child_properties_last
                             decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(

@@ -1,9 +1,9 @@
+// ignore_for_file: prefer_const_constructors_in_immutables
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:stunting/pages/admin/esaisemua.dart';
-import 'package:stunting/pages/admin/hasil_semua.dart';
 import 'package:stunting/theme/color.dart';
 
 class ListEsai extends StatefulWidget {
@@ -75,7 +75,7 @@ class _ListEsaiState extends State<ListEsai> {
                 },
               );
             } else {
-              return Text("No data");
+              return const Text("No data");
             }
           },
         ));
