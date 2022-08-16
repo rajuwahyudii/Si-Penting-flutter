@@ -53,7 +53,7 @@ class _Materi1State extends State<Materi1> {
               ),
               backgroundColor: backgroundColor,
               title: Text(
-                'Materi',
+                'Modul Stunting',
                 style: GoogleFonts.poppins(
                   fontSize: 23,
                   fontWeight: FontWeight.w600,
@@ -68,34 +68,121 @@ class _Materi1State extends State<Materi1> {
               child: PageView(
                 controller: pageController,
                 children: <Widget>[
-                  Column(
-                    children: <Widget>[
-                      const TitleArticelWidget(
-                        title: 'Pengertian Stunting',
-                      ),
-                      Image.asset(
-                        'assets/images/materi1.png',
-                        width: 150,
-                      ),
-                      const SizedBox(
-                        height: 30,
-                      ),
-                      const TextArticleWidget(
-                        text:
-                            'Stunting adalah kondisi gagal tumbuh pada anak balita akibat kekurangan gizi kronis, terutama pada masa 1000 hari pertama kehidupan (HPK) yaitu periode emas pertumbuhan dan perkembangan yang dimulai semenjak terbentuknya janin hingga anak berusia 2 tahun, bukan hanya terganggu pertumbuhan fisiknya (bertubuh kecil/kerdil) sajah, melainkan juga terganggu perkembangan otak yang nantinya mempengaruhi kemampuan dan prestasi di sekolah, produktivitas dan kreativitas di usia produktif.',
-                      ),
-                      const SizedBox(
-                        height: 50,
-                        child: Align(
-                          alignment: Alignment.centerRight,
-                          child: Icon(
-                            Icons.arrow_right_alt_outlined,
-                            color: Colors.white,
-                            size: 50,
-                          ),
-                        ),
-                      ),
-                    ],
+                  Image.asset(
+                    'assets/images/stunting1.png',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/stunting2.jpg',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/stunting3.jpg',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/stunting4.png',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/stunting5.jpg',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/stunting6.png',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/stunting7.jpg',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/stunting8.jpg',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/stunting9.jpg',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/stunting10.jpg',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/stunting11.png',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/stunting12.png',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/stunting13.png',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/stunting14.png',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/stunting15.png',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/stunting16.jpg',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/stunting17.png',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/stunting18.jpg',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/stunting19.jpg',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/stunting20.jpg',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/stunting21.jpg',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/stunting22.jpg',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/stunting23.png',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/stunting24.jpg',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/stunting25.jpg',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/stunting26.jpg',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/stunting27.jpg',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/stunting28.png',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/stunting29.jpg',
+                    width: 10,
                   ),
                   if (materi < 6)
                     EndOfMateri(

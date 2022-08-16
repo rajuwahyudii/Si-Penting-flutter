@@ -49,8 +49,17 @@ class _SplashScreenState extends State<SplashScreen> {
               height: 30,
             ),
             Text(
-              'STUNTING',
+              'SiPenting',
               style: splashTextStyle,
+              textScaleFactor: 1,
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Text(
+              'APLIKASI PENGETAHUAN STUNTING',
+              textAlign: TextAlign.center,
+              style: splash2TextStyle,
               textScaleFactor: 1,
             ),
           ],

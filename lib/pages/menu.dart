@@ -268,7 +268,7 @@ class _MenuState extends State<Menu> {
                                   ),
                                 if (materi > 4)
                                   MateriMenu(
-                                    title: 'Materi 1',
+                                    title: 'Modul Stunting',
                                     isDone: materi != 5 ? true : false,
                                     press: () {
                                       Navigator.push(
