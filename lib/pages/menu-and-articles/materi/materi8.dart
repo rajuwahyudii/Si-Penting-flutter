@@ -8,18 +8,17 @@ import 'package:stunting/pages/menu.dart';
 import 'package:stunting/theme/color.dart';
 import 'package:stunting/widgets/end_of_materi.dart';
 import 'package:stunting/widgets/list_article_widget.dart';
-import 'package:stunting/widgets/sub_judul_artikel_widget.dart';
 import 'package:stunting/widgets/text_article_widget.dart';
 import 'package:stunting/widgets/tittle_article_widget.dart';
 
-class Materi5 extends StatefulWidget {
-  const Materi5({Key? key}) : super(key: key);
+class Materi8 extends StatefulWidget {
+  const Materi8({Key? key}) : super(key: key);
 
   @override
-  State<Materi5> createState() => _Materi5State();
+  State<Materi8> createState() => _Materi8State();
 }
 
-class _Materi5State extends State<Materi5> {
+class _Materi8State extends State<Materi8> {
   PageController pageController = PageController();
   static FirebaseAuth auth = FirebaseAuth.instance;
   static User user = auth.currentUser!;
@@ -55,7 +54,7 @@ class _Materi5State extends State<Materi5> {
               ),
               backgroundColor: backgroundColor,
               title: Text(
-                'Modul Gizi Ibu Hamil',
+                'Modul Pola Asuh Anak',
                 style: GoogleFonts.poppins(
                   fontSize: 23,
                   fontWeight: FontWeight.w600,
@@ -71,36 +70,20 @@ class _Materi5State extends State<Materi5> {
                 controller: pageController,
                 children: <Widget>[
                   Image.asset(
-                    'assets/images/giziibuhamil1.png',
+                    'assets/images/modulanak1.jpg',
                     width: 10,
                   ),
-                  Image.asset(
-                    'assets/images/giziibuhamil2.jpg',
-                    width: 10,
-                  ),
-                  Image.asset(
-                    'assets/images/giziibuhamil3.jpg',
-                    width: 10,
-                  ),
-                  Image.asset(
-                    'assets/images/giziibuhamil4.png',
-                    width: 10,
-                  ),
-                  Image.asset(
-                    'assets/images/giziibuhamil5.png',
-                    width: 10,
-                  ),
-                  if (materi < 10)
+                  if (materi < 12)
                     EndOfMateri(
                       text: 'Lanjut',
                       press: () async {
-                        await AuthServices.nextMateri(10)
+                        await AuthServices.nextMateri(12)
                             .then(
                               (value) =>
                                   ScaffoldMessenger.of(context).showSnackBar(
                                 const SnackBar(
                                   content:
-                                      Text("Berhasil Menyelesaikan Materi 5"),
+                                      Text("Berhasil Menyelesaikan Materi 7"),
                                 ),
                               ),
                             )

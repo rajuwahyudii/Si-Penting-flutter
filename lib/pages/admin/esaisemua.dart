@@ -49,7 +49,7 @@ class EsaiSemua extends StatelessWidget {
               ),
               backgroundColor: backgroundColor,
               title: Text(
-                'Esai',
+                'Esai dari ${data['nama']}',
                 style: GoogleFonts.poppins(
                   fontSize: 23,
                   fontWeight: FontWeight.w600,

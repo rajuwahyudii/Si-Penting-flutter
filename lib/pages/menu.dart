@@ -19,6 +19,8 @@ import 'package:stunting/pages/menu-and-articles/materi/materi4.dart';
 import 'package:stunting/pages/menu-and-articles/materi/materi5.dart';
 import 'package:stunting/pages/menu-and-articles/materi/materi6.dart';
 import 'package:stunting/pages/menu-and-articles/materi/materi7.dart';
+import 'package:stunting/pages/menu-and-articles/materi/materi8.dart';
+import 'package:stunting/pages/menu-and-articles/materi/materi_tambahan.dart';
 import 'package:stunting/pages/menu-and-articles/materi/postest_esai_menu.dart';
 import 'package:stunting/pages/menu-and-articles/materi/postest_g_menu.dart';
 import 'package:stunting/pages/menu-and-articles/materi/postest_prilaku.dart';
@@ -281,7 +283,7 @@ class _MenuState extends State<Menu> {
                                   ),
                                 if (materi > 5)
                                   MateriMenu(
-                                    title: 'Materi 2',
+                                    title: 'Modul Anemia',
                                     isDone: materi != 6 ? true : false,
                                     press: () {
                                       Navigator.push(
@@ -294,7 +296,7 @@ class _MenuState extends State<Menu> {
                                   ),
                                 if (materi > 6)
                                   MateriMenu(
-                                    title: 'Materi 3',
+                                    title: 'Modul Gizi Seimbang',
                                     isDone: materi != 7 ? true : false,
                                     press: () {
                                       Navigator.push(
@@ -307,7 +309,7 @@ class _MenuState extends State<Menu> {
                                   ),
                                 if (materi > 7)
                                   MateriMenu(
-                                    title: 'Materi 4',
+                                    title: 'Modul Imunisasi',
                                     isDone: materi != 8 ? true : false,
                                     press: () {
                                       Navigator.push(
@@ -320,7 +322,7 @@ class _MenuState extends State<Menu> {
                                   ),
                                 if (materi > 8)
                                   MateriMenu(
-                                    title: 'Materi 5',
+                                    title: 'Modul Gizi Ibu Hamil',
                                     isDone: materi != 9 ? true : false,
                                     press: () {
                                       Navigator.push(
@@ -333,7 +335,7 @@ class _MenuState extends State<Menu> {
                                   ),
                                 if (materi > 9)
                                   MateriMenu(
-                                    title: 'Materi 6',
+                                    title: 'Modul Sanitasi',
                                     isDone: materi != 10 ? true : false,
                                     press: () {
                                       Navigator.push(
@@ -346,13 +348,40 @@ class _MenuState extends State<Menu> {
                                   ),
                                 if (materi > 10)
                                   MateriMenu(
-                                    title: 'Materi 7',
+                                    title: 'Modul Asi',
                                     isDone: materi != 11 ? true : false,
                                     press: () {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
                                           builder: (context) => const Materi7(),
+                                        ),
+                                      );
+                                    },
+                                  ),
+                                if (materi > 10)
+                                  MateriMenu(
+                                    title: 'Modul Pola Asuh Anak',
+                                    isDone: materi != 11 ? true : false,
+                                    press: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => const Materi8(),
+                                        ),
+                                      );
+                                    },
+                                  ),
+                                if (materi > 10)
+                                  MateriMenu(
+                                    title: 'Materi Tambahan',
+                                    isDone: materi != 11 ? true : false,
+                                    press: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              const MateriTambahan(),
                                         ),
                                       );
                                     },
@@ -496,6 +525,37 @@ class _MenuState extends State<Menu> {
                               fontSize: 12,
                               fontWeight: FontWeight.w400,
                               color: index == 1 ? Colors.black : Colors.white,
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        index = 2;
+                      });
+                    },
+                    child: Container(
+                      padding: const EdgeInsets.fromLTRB(15, 10, 15, 10),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: <Widget>[
+                          ImageIcon(
+                            const AssetImage(
+                              'assets/images/timbangan.png',
+                            ),
+                            color: index != 3 ? Colors.black : Colors.white,
+                            size: 25,
+                          ),
+                          Text(
+                            'Kalkulator Gizi',
+                            style: GoogleFonts.poppins(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w400,
+                              color: index != 3 ? Colors.black : Colors.white,
                             ),
                           )
                         ],

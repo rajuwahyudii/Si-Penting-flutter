@@ -54,7 +54,7 @@ class _Materi4State extends State<Materi4> {
               ),
               backgroundColor: backgroundColor,
               title: Text(
-                'Materi',
+                'Modul Imunisasi',
                 style: GoogleFonts.poppins(
                   fontSize: 23,
                   fontWeight: FontWeight.w600,
@@ -69,43 +69,13 @@ class _Materi4State extends State<Materi4> {
               child: PageView(
                 controller: pageController,
                 children: <Widget>[
-                  Column(
-                    children: <Widget>[
-                      const TitleArticelWidget(
-                        title: 'Dampak Stunting',
-                      ),
-                      Image.asset(
-                        'assets/images/materi5.jpg',
-                        width: 300,
-                      ),
-                      const SubtitleArtikelWidget(
-                        title: 'Dampak dalam waktu jangka pendek',
-                      ),
-                      const ListArticleWidget(
-                        text: 'Terganggunya perkembangan otak',
-                      ),
-                      const ListArticleWidget(
-                        text: 'Kecerdasan berkurang',
-                      ),
-                      const ListArticleWidget(
-                        text: 'Gangguan metabolisme dalam tubuh',
-                      ),
-                      const SubtitleArtikelWidget(
-                        title: 'Dampak jangka panjang',
-                      ),
-                      const ListArticleWidget(
-                        text:
-                            'Menurunya kemampuan kognitif dan prestasi belajar',
-                      ),
-                      const ListArticleWidget(
-                        text:
-                            'Menurunnya kekebalan tubuh sehinggah mudah terserang penyakit',
-                      ),
-                      const ListArticleWidget(
-                        text:
-                            'Resiko tinggi munculnya penyakit diabetes, obesitas, penyakit antung dan pembuluh darah, kanker, stroke dan disabilitas pada usia tua',
-                      ),
-                    ],
+                  Image.asset(
+                    'assets/images/imunisasi1.png',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/imunisasi2.png',
+                    width: 10,
                   ),
                   if (materi < 9)
                     EndOfMateri(

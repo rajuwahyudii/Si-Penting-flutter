@@ -49,7 +49,7 @@ class _SplashScreenState extends State<SplashScreen> {
               height: 30,
             ),
             Text(
-              'SiPenting',
+              'Si Penting',
               style: splashTextStyle,
               textScaleFactor: 1,
             ),

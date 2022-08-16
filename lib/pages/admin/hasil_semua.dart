@@ -41,7 +41,7 @@ class HasilSemua extends StatelessWidget {
               ),
               backgroundColor: backgroundColor,
               title: Text(
-                'Hasil',
+                'Hasil Test ${data['nama']}',
                 style: GoogleFonts.poppins(
                   fontSize: 23,
                   fontWeight: FontWeight.w600,

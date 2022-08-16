@@ -53,7 +53,7 @@ class _Materi2State extends State<Materi2> {
               ),
               backgroundColor: backgroundColor,
               title: Text(
-                'Materi',
+                'Modul Anemia',
                 style: GoogleFonts.poppins(
                   fontSize: 23,
                   fontWeight: FontWeight.w600,
@@ -68,35 +68,69 @@ class _Materi2State extends State<Materi2> {
               child: PageView(
                 controller: pageController,
                 children: <Widget>[
-                  Column(
-                    children: <Widget>[
-                      const TitleArticelWidget(
-                        title: 'GEJALA STUNTING/CIRI CIRI STUNTING',
-                      ),
-                      Image.asset(
-                        'assets/images/materi2.png',
-                        width: 200,
-                      ),
-                      const SizedBox(
-                        height: 50,
-                      ),
-                      const ListArticleWidget(
-                        text: 'Pertumbuhan melambat',
-                      ),
-                      const ListArticleWidget(
-                        text:
-                            'Usia 8-10 tahun anak menjadi lebih pendiam, tidak banyak melakukan eye contact',
-                      ),
-                      const ListArticleWidget(
-                        text: 'Wajah tampak lebih mudah dari usianya',
-                      ),
-                      const ListArticleWidget(
-                        text: 'Pubertas terlambat',
-                      ),
-                      const ListArticleWidget(
-                        text: 'Pertumbuhan gigi terlambat',
-                      ),
-                    ],
+                  Image.asset(
+                    'assets/images/anemia1.png',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/anemia2.png',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/anemia3.png',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/anemia4.jpg',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/anemia5.jpg',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/anemia6.jpg',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/anemia7.jpg',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/anemia8.jpg',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/anemia9.jpg',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/anemia10.jpg',
+                    width: 10,
+                  ),
+                  // Image.asset(
+                  //   'assets/images/anemia11.jpg',
+                  //   width: 10,
+                  // ),
+                  Image.asset(
+                    'assets/images/anemia12.jpg',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/anemia13.png',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/anemia14.png',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/anemia15.jpg',
+                    width: 10,
+                  ),
+                  Image.asset(
+                    'assets/images/anemia16.jpg',
+                    width: 10,
                   ),
                   if (materi < 7)
                     EndOfMateri(

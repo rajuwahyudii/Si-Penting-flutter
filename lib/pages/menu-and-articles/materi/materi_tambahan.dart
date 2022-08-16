@@ -84,17 +84,6 @@ class _MateriTambahanState extends State<MateriTambahan> {
                       text:
                           'Stunting adalah kondisi gagal tumbuh pada anak balita akibat kekurangan gizi kronis, terutama pada masa 1000 hari pertama kehidupan (HPK) yaitu periode emas pertumbuhan dan perkembangan yang dimulai semenjak terbentuknya janin hingga anak berusia 2 tahun, bukan hanya terganggu pertumbuhan fisiknya (bertubuh kecil/kerdil) sajah, melainkan juga terganggu perkembangan otak yang nantinya mempengaruhi kemampuan dan prestasi di sekolah, produktivitas dan kreativitas di usia produktif.',
                     ),
-                    const SizedBox(
-                      height: 50,
-                      child: Align(
-                        alignment: Alignment.centerRight,
-                        child: Icon(
-                          Icons.arrow_right_alt_outlined,
-                          color: Colors.white,
-                          size: 50,
-                        ),
-                      ),
-                    ),
                     const TitleArticelWidget(
                       title: 'GEJALA STUNTING/CIRI CIRI STUNTING',
                     ),
