@@ -46,6 +46,7 @@ class AuthServices {
           .doc(user.uid)
           .set({
             "id": user.uid,
+            "new": true,
             "role": "user",
             "nama": nama,
             "email": email,
