@@ -1,14 +1,11 @@
+// ignore_for_file: prefer_final_fields
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:stunting/common/services.dart';
-import 'package:stunting/models/pretest_esai.dart';
-import 'package:stunting/models/pretest_ganda.dart';
 import 'package:stunting/pages/menu.dart';
 import 'package:stunting/theme/color.dart';
-import 'package:stunting/widgets/finished.dart';
 import 'package:stunting/widgets/finishscreen_esai.dart';
-import 'package:stunting/widgets/quiz2.dart';
-import 'package:stunting/widgets/quiz_esai.dart';
 
 class PretestEsai extends StatefulWidget {
   const PretestEsai({Key? key}) : super(key: key);
@@ -29,14 +26,14 @@ class _PretestEsaiState extends State<PretestEsai> {
       child: Scaffold(
           backgroundColor: const Color.fromARGB(255, 46, 143, 228),
           body: Container(
-            margin: EdgeInsets.all(20),
+            margin: const EdgeInsets.all(20),
             child: SingleChildScrollView(
               child: _index < 3
                   ? Column(children: [
                       Container(
                         height: size.height / 3,
                         width: size.width,
-                        padding: EdgeInsets.all(5),
+                        padding: const EdgeInsets.all(5),
                         // ignore: sort_child_properties_last
                         child: Center(
                           child: _index > 0 && _index == 1
@@ -58,7 +55,7 @@ class _PretestEsaiState extends State<PretestEsai> {
                                 ),
                         ),
                         decoration: BoxDecoration(
-                          color: Color(0xF62975D0),
+                          color: const Color(0xF62975D0),
                           borderRadius: BorderRadius.circular(
                             20,
                           ),
