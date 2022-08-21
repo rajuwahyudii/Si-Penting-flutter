@@ -34,6 +34,7 @@ import 'package:stunting/pages/wrapper.dart';
 
 import 'package:stunting/theme/color.dart';
 import 'package:stunting/widgets/article_menu.dart';
+import 'package:stunting/widgets/calculator.dart';
 import 'package:stunting/widgets/materi_menu.dart';
 
 class Menu extends StatefulWidget {
@@ -117,7 +118,11 @@ class _MenuState extends State<Menu> {
                     : const Text('')
               ],
               title: Text(
-                index == 1 ? 'Menu' : 'Artikel',
+                index == 1
+                    ? 'Menu'
+                    : index == 2
+                        ? 'Artikel'
+                        : 'Calculator',
                 style: GoogleFonts.poppins(
                   fontSize: 23,
                   fontWeight: FontWeight.w600,
@@ -137,7 +142,9 @@ class _MenuState extends State<Menu> {
                       child: Image.asset(
                         index == 1
                             ? 'assets/images/menu.png'
-                            : 'assets/images/artikel.png',
+                            : index == 2
+                                ? 'assets/images/artikel.png'
+                                : 'assets/images/login.png',
                         width: 180,
                       ),
                     ),
@@ -146,7 +153,7 @@ class _MenuState extends State<Menu> {
                     ),
                     SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
-                      child: index != 1
+                      child: index == 2
                           ? Column(
                               children: <Widget>[
                                 ArticleMenu(
@@ -210,253 +217,264 @@ class _MenuState extends State<Menu> {
                                 ),
                               ],
                             )
-                          : Column(
-                              children: [
-                                if (materi > 0)
-                                  MateriMenu(
-                                    title: 'Pre Test (Ganda)',
-                                    isDone: materi != 1 ? true : false,
-                                    press: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) =>
-                                              const PretestGMenu(),
-                                        ),
-                                      );
-                                    },
-                                  ),
-                                if (materi > 1)
-                                  MateriMenu(
-                                    title: 'Pre Test (Esai)',
-                                    isDone: materi != 2 ? true : false,
-                                    press: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) =>
-                                              const PretestEsaiMenu(),
-                                        ),
-                                      );
-                                    },
-                                  ),
-                                if (materi > 2)
-                                  MateriMenu(
-                                    title: 'Pre Test (Sikap)',
-                                    isDone: materi != 3 ? true : false,
-                                    press: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) =>
-                                              const PretestSikapMenu(),
-                                        ),
-                                      );
-                                    },
-                                  ),
-                                if (materi > 3)
-                                  MateriMenu(
-                                    title: 'Pre Test (Prilaku)',
-                                    isDone: materi != 4 ? true : false,
-                                    press: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) =>
-                                              const PretestPrilakuMenu(),
-                                        ),
-                                      );
-                                    },
-                                  ),
-                                if (materi > 4)
-                                  MateriMenu(
-                                    title: 'Modul Stunting',
-                                    isDone: materi != 5 ? true : false,
-                                    press: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) => const Materi1(),
-                                        ),
-                                      );
-                                    },
-                                  ),
-                                if (materi > 5)
-                                  MateriMenu(
-                                    title: 'Modul Anemia',
-                                    isDone: materi != 6 ? true : false,
-                                    press: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) => const Materi2(),
-                                        ),
-                                      );
-                                    },
-                                  ),
-                                if (materi > 6)
-                                  MateriMenu(
-                                    title: 'Modul Gizi Seimbang',
-                                    isDone: materi != 7 ? true : false,
-                                    press: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) => const Materi3(),
-                                        ),
-                                      );
-                                    },
-                                  ),
-                                if (materi > 7)
-                                  MateriMenu(
-                                    title: 'Modul Imunisasi',
-                                    isDone: materi != 8 ? true : false,
-                                    press: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) => const Materi4(),
-                                        ),
-                                      );
-                                    },
-                                  ),
-                                if (materi > 8)
-                                  MateriMenu(
-                                    title: 'Modul Gizi Ibu Hamil',
-                                    isDone: materi != 9 ? true : false,
-                                    press: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) => const Materi5(),
-                                        ),
-                                      );
-                                    },
-                                  ),
-                                if (materi > 9)
-                                  MateriMenu(
-                                    title: 'Modul Sanitasi',
-                                    isDone: materi != 10 ? true : false,
-                                    press: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) => const Materi6(),
-                                        ),
-                                      );
-                                    },
-                                  ),
-                                if (materi > 10)
-                                  MateriMenu(
-                                    title: 'Modul Asi',
-                                    isDone: materi != 11 ? true : false,
-                                    press: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) => const Materi7(),
-                                        ),
-                                      );
-                                    },
-                                  ),
-                                if (materi > 10)
-                                  MateriMenu(
-                                    title: 'Modul Pola Asuh Anak',
-                                    isDone: materi != 11 ? true : false,
-                                    press: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) => const Materi8(),
-                                        ),
-                                      );
-                                    },
-                                  ),
-                                if (materi > 10)
-                                  MateriMenu(
-                                    title: 'Materi Tambahan',
-                                    isDone: materi != 11 ? true : false,
-                                    press: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) =>
-                                              const MateriTambahan(),
-                                        ),
-                                      );
-                                    },
-                                  ),
-                                if (materi > 11)
-                                  MateriMenu(
-                                    title: 'Post Test (Ganda)',
-                                    isDone: materi != 12 ? true : false,
-                                    press: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) =>
-                                              const PostestGMenu(),
-                                        ),
-                                      );
-                                    },
-                                  ),
-                                if (materi > 12)
-                                  MateriMenu(
-                                    title: 'Post Test (Esai)',
-                                    isDone: materi != 13 ? true : false,
-                                    press: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) =>
-                                              const PostestEsaiMenu(),
-                                        ),
-                                      );
-                                    },
-                                  ),
-                                if (materi > 13)
-                                  MateriMenu(
-                                    title: 'Post Test (Sikap)',
-                                    isDone: materi != 14 ? true : false,
-                                    press: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) =>
-                                              const PostestSikapMenu(),
-                                        ),
-                                      );
-                                    },
-                                  ),
-                                if (materi > 14)
-                                  MateriMenu(
-                                    title: 'Post Test (Prilaku)',
-                                    isDone: materi != 15 ? true : false,
-                                    press: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) =>
-                                              const PostestPrilakuMenu(),
-                                        ),
-                                      );
-                                    },
-                                  ),
-                                if (materi > 15)
-                                  MateriMenu(
-                                    title: 'Hasil',
-                                    isDone: materi != 16 ? true : false,
-                                    press: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) => const Raport(),
-                                        ),
-                                      );
-                                    },
-                                  ),
-                              ],
-                            ),
+                          : index == 1
+                              ? Column(
+                                  children: [
+                                    if (materi > 0)
+                                      MateriMenu(
+                                        title: 'Pre Test (Ganda)',
+                                        isDone: materi != 1 ? true : false,
+                                        press: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const PretestGMenu(),
+                                            ),
+                                          );
+                                        },
+                                      ),
+                                    if (materi > 1)
+                                      MateriMenu(
+                                        title: 'Pre Test (Esai)',
+                                        isDone: materi != 2 ? true : false,
+                                        press: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const PretestEsaiMenu(),
+                                            ),
+                                          );
+                                        },
+                                      ),
+                                    if (materi > 2)
+                                      MateriMenu(
+                                        title: 'Pre Test (Sikap)',
+                                        isDone: materi != 3 ? true : false,
+                                        press: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const PretestSikapMenu(),
+                                            ),
+                                          );
+                                        },
+                                      ),
+                                    if (materi > 3)
+                                      MateriMenu(
+                                        title: 'Pre Test (Prilaku)',
+                                        isDone: materi != 4 ? true : false,
+                                        press: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const PretestPrilakuMenu(),
+                                            ),
+                                          );
+                                        },
+                                      ),
+                                    if (materi > 4)
+                                      MateriMenu(
+                                        title: 'Modul Stunting',
+                                        isDone: materi != 5 ? true : false,
+                                        press: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const Materi1(),
+                                            ),
+                                          );
+                                        },
+                                      ),
+                                    if (materi > 5)
+                                      MateriMenu(
+                                        title: 'Modul Anemia',
+                                        isDone: materi != 6 ? true : false,
+                                        press: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const Materi2(),
+                                            ),
+                                          );
+                                        },
+                                      ),
+                                    if (materi > 6)
+                                      MateriMenu(
+                                        title: 'Modul Gizi Seimbang',
+                                        isDone: materi != 7 ? true : false,
+                                        press: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const Materi3(),
+                                            ),
+                                          );
+                                        },
+                                      ),
+                                    if (materi > 7)
+                                      MateriMenu(
+                                        title: 'Modul Imunisasi',
+                                        isDone: materi != 8 ? true : false,
+                                        press: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const Materi4(),
+                                            ),
+                                          );
+                                        },
+                                      ),
+                                    if (materi > 8)
+                                      MateriMenu(
+                                        title: 'Modul Gizi Ibu Hamil',
+                                        isDone: materi != 9 ? true : false,
+                                        press: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const Materi5(),
+                                            ),
+                                          );
+                                        },
+                                      ),
+                                    if (materi > 9)
+                                      MateriMenu(
+                                        title: 'Modul Sanitasi',
+                                        isDone: materi != 10 ? true : false,
+                                        press: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const Materi6(),
+                                            ),
+                                          );
+                                        },
+                                      ),
+                                    if (materi > 10)
+                                      MateriMenu(
+                                        title: 'Modul Asi',
+                                        isDone: materi != 11 ? true : false,
+                                        press: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const Materi7(),
+                                            ),
+                                          );
+                                        },
+                                      ),
+                                    if (materi > 10)
+                                      MateriMenu(
+                                        title: 'Modul Pola Asuh Anak',
+                                        isDone: materi != 11 ? true : false,
+                                        press: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const Materi8(),
+                                            ),
+                                          );
+                                        },
+                                      ),
+                                    if (materi > 10)
+                                      MateriMenu(
+                                        title: 'Materi Tambahan',
+                                        isDone: materi != 11 ? true : false,
+                                        press: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const MateriTambahan(),
+                                            ),
+                                          );
+                                        },
+                                      ),
+                                    if (materi > 11)
+                                      MateriMenu(
+                                        title: 'Post Test (Ganda)',
+                                        isDone: materi != 12 ? true : false,
+                                        press: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const PostestGMenu(),
+                                            ),
+                                          );
+                                        },
+                                      ),
+                                    if (materi > 12)
+                                      MateriMenu(
+                                        title: 'Post Test (Esai)',
+                                        isDone: materi != 13 ? true : false,
+                                        press: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const PostestEsaiMenu(),
+                                            ),
+                                          );
+                                        },
+                                      ),
+                                    if (materi > 13)
+                                      MateriMenu(
+                                        title: 'Post Test (Sikap)',
+                                        isDone: materi != 14 ? true : false,
+                                        press: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const PostestSikapMenu(),
+                                            ),
+                                          );
+                                        },
+                                      ),
+                                    if (materi > 14)
+                                      MateriMenu(
+                                        title: 'Post Test (Prilaku)',
+                                        isDone: materi != 15 ? true : false,
+                                        press: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const PostestPrilakuMenu(),
+                                            ),
+                                          );
+                                        },
+                                      ),
+                                    if (materi > 15)
+                                      MateriMenu(
+                                        title: 'Hasil',
+                                        isDone: materi != 16 ? true : false,
+                                        press: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const Raport(),
+                                            ),
+                                          );
+                                        },
+                                      ),
+                                  ],
+                                )
+                              : Calculator(),
                     )
                   ],
                 ),
@@ -516,7 +534,7 @@ class _MenuState extends State<Menu> {
                             const AssetImage(
                               'assets/images/menu-icn-white.png',
                             ),
-                            color: index == 1 ? Colors.black : Colors.white,
+                            color: index != 2 ? Colors.black : Colors.white,
                             size: 25,
                           ),
                           Text(
@@ -524,7 +542,7 @@ class _MenuState extends State<Menu> {
                             style: GoogleFonts.poppins(
                               fontSize: 12,
                               fontWeight: FontWeight.w400,
-                              color: index == 1 ? Colors.black : Colors.white,
+                              color: index != 2 ? Colors.black : Colors.white,
                             ),
                           )
                         ],
@@ -534,7 +552,7 @@ class _MenuState extends State<Menu> {
                   GestureDetector(
                     onTap: () {
                       setState(() {
-                        index = 2;
+                        index = 3;
                       });
                     },
                     child: Container(
