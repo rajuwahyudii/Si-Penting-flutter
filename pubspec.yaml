@@ -42,6 +42,8 @@ dependencies:
   loading_animation_widget: ^1.2.0+2
   encrypt: ^5.0.1
   xid: ^1.0.7
+  datetime_picker_formfield: ^2.0.1
+  intl: ^0.17.0
 
 dev_dependencies:
   flutter_test:

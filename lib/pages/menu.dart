@@ -1,5 +1,9 @@
 // ignore_for_file: use_build_context_synchronously
 
+import 'dart:async';
+
+import 'package:intl/intl.dart';
+import 'package:datetime_picker_formfield/datetime_picker_formfield.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -33,9 +37,11 @@ import 'package:stunting/pages/quiz/raport.dart';
 import 'package:stunting/pages/wrapper.dart';
 
 import 'package:stunting/theme/color.dart';
+import 'package:stunting/theme/font.dart';
 import 'package:stunting/widgets/article_menu.dart';
 import 'package:stunting/widgets/calculator.dart';
 import 'package:stunting/widgets/materi_menu.dart';
+import 'package:stunting/widgets/text_field.dart';
 
 class Menu extends StatefulWidget {
   const Menu({Key? key}) : super(key: key);
@@ -45,11 +51,15 @@ class Menu extends StatefulWidget {
 }
 
 class _MenuState extends State<Menu> {
+  Completer completer = Completer();
   int index = 1;
   static FirebaseAuth auth = FirebaseAuth.instance;
   static User user = auth.currentUser!;
   CollectionReference collectionRef =
       FirebaseFirestore.instance.collection('user');
+  DateTime? date;
+  int tb = 0;
+  int bb = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -122,7 +132,7 @@ class _MenuState extends State<Menu> {
                     ? 'Menu'
                     : index == 2
                         ? 'Artikel'
-                        : 'Calculator',
+                        : 'Kalkulator Gizi',
                 style: GoogleFonts.poppins(
                   fontSize: 23,
                   fontWeight: FontWeight.w600,
@@ -144,8 +154,8 @@ class _MenuState extends State<Menu> {
                             ? 'assets/images/menu.png'
                             : index == 2
                                 ? 'assets/images/artikel.png'
-                                : 'assets/images/login.png',
-                        width: 180,
+                                : 'assets/images/calculate.png',
+                        width: index != 3 ? 180 : 200,
                       ),
                     ),
                     const SizedBox(
@@ -551,9 +561,15 @@ class _MenuState extends State<Menu> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      setState(() {
-                        index = 3;
-                      });
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const Calculator(),
+                        ),
+                      );
+                      // setState(() {
+                      //   index = 3;
+                      // });
                     },
                     child: Container(
                       padding: const EdgeInsets.fromLTRB(15, 10, 15, 10),

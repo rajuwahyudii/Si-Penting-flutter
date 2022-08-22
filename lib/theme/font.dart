@@ -21,3 +21,8 @@ TextStyle splash2TextStyle = GoogleFonts.poppins(
   fontWeight: FontWeight.w600,
   color: Colors.white,
 );
+
+TextStyle tanggalTextstyle = GoogleFonts.poppins(
+  fontSize: 22,
+  fontWeight: FontWeight.w400,
+);
