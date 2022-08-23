@@ -29,10 +29,13 @@ class _CalculatorState extends State<Calculator> {
       backgroundColor: backgroundColor,
       appBar: AppBar(
         leading: IconButton(
-            icon: const Icon(
-              Icons.arrow_back,
-            ),
-            onPressed: () {}),
+          icon: const Icon(
+            Icons.arrow_back,
+          ),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
         backgroundColor: backgroundColor,
         title: Text(
           'Kalkulator Gizi',
