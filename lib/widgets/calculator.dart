@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:stunting/theme/color.dart';
 import 'package:stunting/theme/font.dart';
 import 'package:stunting/widgets/button.dart';
+import 'package:stunting/widgets/hasilcal.dart';
 import 'package:stunting/widgets/text_field.dart';
 
 class Calculator extends StatefulWidget {
@@ -124,6 +125,11 @@ class _CalculatorState extends State<Calculator> {
                                   umurtahun = tahunsekarang -
                                       int.parse(tahunlahir.toString()) +
                                       1;
+                                } else if (umurbulan == 0) {
+                                  umurtahun = tahunsekarang -
+                                      int.parse(tahunlahir.toString());
+
+                                  umurbulan = int.parse(umurbulan.toString());
                                 } else {
                                   umurtahun = tahunsekarang -
                                       int.parse(tahunlahir.toString());
@@ -166,7 +172,17 @@ class _CalculatorState extends State<Calculator> {
             ),
             CustomButtonWidget(
                 text: 'Hitung',
-                press: () {},
+                press: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => HasilCal(
+                        umurbulan: umurbulan!,
+                        umurtahun: umurtahun!,
+                      ),
+                    ),
+                  );
+                },
                 buttonColor: yellowButtonColor,
                 textColor: Colors.black)
           ],
