@@ -7,9 +7,6 @@ import 'package:stunting/common/services.dart';
 import 'package:stunting/pages/menu.dart';
 import 'package:stunting/theme/color.dart';
 import 'package:stunting/widgets/end_of_materi.dart';
-import 'package:stunting/widgets/sub_judul_artikel_widget.dart';
-import 'package:stunting/widgets/text_article_widget.dart';
-import 'package:stunting/widgets/tittle_article_widget.dart';
 
 class Materi3 extends StatefulWidget {
   const Materi3({Key? key}) : super(key: key);

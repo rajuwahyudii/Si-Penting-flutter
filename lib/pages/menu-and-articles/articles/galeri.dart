@@ -1,21 +1,21 @@
+// ignore_for_file: unused_local_variable
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
-import 'package:stunting/common/services.dart';
 import 'package:stunting/pages/menu.dart';
 import 'package:stunting/theme/color.dart';
-import 'package:stunting/widgets/end_of_materi.dart';
 
-class Materi1 extends StatefulWidget {
-  const Materi1({Key? key}) : super(key: key);
+class Galeri extends StatefulWidget {
+  const Galeri({Key? key}) : super(key: key);
 
   @override
-  State<Materi1> createState() => _Materi1State();
+  State<Galeri> createState() => _GaleriState();
 }
 
-class _Materi1State extends State<Materi1> {
+class _GaleriState extends State<Galeri> {
   PageController pageController = PageController();
   static FirebaseAuth auth = FirebaseAuth.instance;
   static User user = auth.currentUser!;
@@ -51,7 +51,7 @@ class _Materi1State extends State<Materi1> {
               ),
               backgroundColor: backgroundColor,
               title: Text(
-                'Modul Stunting',
+                'Galeri Penelitian',
                 style: GoogleFonts.poppins(
                   fontSize: 23,
                   fontWeight: FontWeight.w600,
@@ -182,37 +182,6 @@ class _Materi1State extends State<Materi1> {
                     'assets/images/stunting29.jpg',
                     width: 10,
                   ),
-                  if (materi < 6)
-                    EndOfMateri(
-                      text: 'Lanjut',
-                      press: () async {
-                        await AuthServices.nextMateri(6)
-                            .then(
-                              (value) =>
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                const SnackBar(
-                                  content: Text(
-                                      "Berhasil Menyelesaikan Modul Stunting"),
-                                ),
-                              ),
-                            )
-                            .onError(
-                              (error, stackTrace) =>
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                const SnackBar(
-                                  content: Text("Permintaan Gagal"),
-                                ),
-                              ),
-                            );
-                        // ignore: use_build_context_synchronously
-                        await Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const Menu(),
-                          ),
-                        );
-                      },
-                    )
                 ],
               ),
             ),

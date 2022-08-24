@@ -2,8 +2,6 @@
 
 import 'dart:async';
 
-import 'package:intl/intl.dart';
-import 'package:datetime_picker_formfield/datetime_picker_formfield.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +14,7 @@ import 'package:stunting/pages/menu-and-articles/articles/article2.dart';
 import 'package:stunting/pages/menu-and-articles/articles/article3.dart';
 import 'package:stunting/pages/menu-and-articles/articles/article4.dart';
 import 'package:stunting/pages/menu-and-articles/articles/article5.dart';
+import 'package:stunting/pages/menu-and-articles/articles/galeri.dart';
 import 'package:stunting/pages/menu-and-articles/materi/materi1.dart';
 import 'package:stunting/pages/menu-and-articles/materi/materi2.dart';
 import 'package:stunting/pages/menu-and-articles/materi/materi3.dart';
@@ -37,11 +36,9 @@ import 'package:stunting/pages/quiz/raport.dart';
 import 'package:stunting/pages/wrapper.dart';
 
 import 'package:stunting/theme/color.dart';
-import 'package:stunting/theme/font.dart';
 import 'package:stunting/widgets/article_menu.dart';
 import 'package:stunting/widgets/calculator.dart';
 import 'package:stunting/widgets/materi_menu.dart';
-import 'package:stunting/widgets/text_field.dart';
 
 class Menu extends StatefulWidget {
   const Menu({Key? key}) : super(key: key);
@@ -166,6 +163,17 @@ class _MenuState extends State<Menu> {
                       child: index == 2
                           ? Column(
                               children: <Widget>[
+                                ArticleMenu(
+                                  title: 'Galeri Penelitian',
+                                  press: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => const Galeri(),
+                                      ),
+                                    );
+                                  },
+                                ),
                                 ArticleMenu(
                                   title:
                                       'Remaja Ternyata Memiliki Peran Penting dalam Mencegah Stunting',
@@ -484,7 +492,7 @@ class _MenuState extends State<Menu> {
                                       ),
                                   ],
                                 )
-                              : Calculator(),
+                              : const Calculator(),
                     )
                   ],
                 ),
