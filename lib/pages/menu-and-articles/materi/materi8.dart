@@ -73,17 +73,17 @@ class _Materi8State extends State<Materi8> {
                     'assets/images/modulanak1.jpg',
                     width: 10,
                   ),
-                  if (materi < 12)
+                  if (materi < 13)
                     EndOfMateri(
                       text: 'Lanjut',
                       press: () async {
-                        await AuthServices.nextMateri(12)
+                        await AuthServices.nextMateri(13)
                             .then(
                               (value) =>
                                   ScaffoldMessenger.of(context).showSnackBar(
                                 const SnackBar(
-                                  content:
-                                      Text("Berhasil Menyelesaikan Materi 7"),
+                                  content: Text(
+                                      "Berhasil Menyelesaikan Modul Pola Asuh"),
                                 ),
                               ),
                             )

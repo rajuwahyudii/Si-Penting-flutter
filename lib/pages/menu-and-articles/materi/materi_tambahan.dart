@@ -5,8 +5,10 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
+import 'package:stunting/common/services.dart';
 import 'package:stunting/pages/menu.dart';
 import 'package:stunting/theme/color.dart';
+import 'package:stunting/widgets/end_of_materi.dart';
 import 'package:stunting/widgets/list_article_widget.dart';
 import 'package:stunting/widgets/sub_judul_artikel_widget.dart';
 import 'package:stunting/widgets/text_article_widget.dart';
@@ -480,6 +482,36 @@ class _MateriTambahanState extends State<MateriTambahan> {
                       text:
                           'Sosialisasi tentang pentingnya pola asuh dalam pencegahan stunting bisa dilakukan dengan lebih ringan dan menarik bagi para remaja.  Disampaikan dengan cara yang menyenangkan, bahasa yang sederhana, dan mudah dipahami.  Dengan demikian remaja akan jauh lebih tertarik dan perlahan mulai tumbuh rasa keingintahuan mereka untuk mempelajari dan memahami stunting lebih jauh lagi.  ',
                     ),
+                    EndOfMateri(
+                      text: 'Lanjut',
+                      press: () async {
+                        await AuthServices.nextMateri(14)
+                            .then(
+                              (value) =>
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(
+                                  content:
+                                      Text("Berhasil Menyelesaikan Materi 7"),
+                                ),
+                              ),
+                            )
+                            .onError(
+                              (error, stackTrace) =>
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(
+                                  content: Text("Permintaan Gagal"),
+                                ),
+                              ),
+                            );
+                        // ignore: use_build_context_synchronously
+                        await Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Menu(),
+                          ),
+                        );
+                      },
+                    )
                   ],
                 ),
               ),

@@ -99,8 +99,8 @@ class _Materi5State extends State<Materi5> {
                               (value) =>
                                   ScaffoldMessenger.of(context).showSnackBar(
                                 const SnackBar(
-                                  content:
-                                      Text("Berhasil Menyelesaikan Materi 5"),
+                                  content: Text(
+                                      "Berhasil Menyelesaikan Modul Gizi Ibu Hamil"),
                                 ),
                               ),
                             )

@@ -43,7 +43,7 @@ class _PostestPrilakuState extends State<PostestPrilaku> {
               )
             : FinishScreen(
                 onPressed: () async {
-                  await AuthServices.nextMateri(16);
+                  await AuthServices.nextMateri(18);
                   await AuthServices.HasilPostestPrilaku(_totalScroe);
                   // ignore: use_build_context_synchronously
                   await Navigator.push(

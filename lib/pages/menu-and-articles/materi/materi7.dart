@@ -151,7 +151,7 @@ class _Materi7State extends State<Materi7> {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                 const SnackBar(
                                   content:
-                                      Text("Berhasil Menyelesaikan Materi 7"),
+                                      Text("Berhasil Menyelesaikan Modul Asi"),
                                 ),
                               ),
                             )

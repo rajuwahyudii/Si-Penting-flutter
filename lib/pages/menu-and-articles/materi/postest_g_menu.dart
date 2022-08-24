@@ -68,16 +68,16 @@ class _PostestGMenuState extends State<PostestGMenu> {
               child: PageView(
                 controller: pageController,
                 children: <Widget>[
-                  if (materi > 12)
+                  if (materi > 14)
                     DoneTest(
                         introduction:
                             'Kamu Telah Menyelesaikan\n Postest Pilihan Ganda'),
-                  if (materi < 13)
+                  if (materi < 15)
                     IntroductionTest(
                       introduction:
                           'Pilihlah jawaban yang paling kamu anggap benar! Isilah secara jujur karena ini tidak akan mempengaruhi nilai kamu atau apapun. ini hanya untuk melihat gambaran pengetahuan kamu sebelum terpapar dengan materi di dalam aplikasi.',
                     ),
-                  if (materi < 13)
+                  if (materi < 15)
                     EndOfMateri(
                       text: 'Mulai',
                       press: () async {

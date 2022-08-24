@@ -384,10 +384,10 @@ class _MenuState extends State<Menu> {
                                           );
                                         },
                                       ),
-                                    if (materi > 10)
+                                    if (materi > 11)
                                       MateriMenu(
                                         title: 'Modul Pola Asuh Anak',
-                                        isDone: materi != 11 ? true : false,
+                                        isDone: materi != 12 ? true : false,
                                         press: () {
                                           Navigator.push(
                                             context,
@@ -398,10 +398,10 @@ class _MenuState extends State<Menu> {
                                           );
                                         },
                                       ),
-                                    if (materi > 10)
+                                    if (materi > 12)
                                       MateriMenu(
                                         title: 'Materi Tambahan',
-                                        isDone: materi != 11 ? true : false,
+                                        isDone: materi != 13 ? true : false,
                                         press: () {
                                           Navigator.push(
                                             context,
@@ -412,10 +412,10 @@ class _MenuState extends State<Menu> {
                                           );
                                         },
                                       ),
-                                    if (materi > 11)
+                                    if (materi > 13)
                                       MateriMenu(
                                         title: 'Post Test (Ganda)',
-                                        isDone: materi != 12 ? true : false,
+                                        isDone: materi != 14 ? true : false,
                                         press: () {
                                           Navigator.push(
                                             context,
@@ -426,10 +426,10 @@ class _MenuState extends State<Menu> {
                                           );
                                         },
                                       ),
-                                    if (materi > 12)
+                                    if (materi > 14)
                                       MateriMenu(
                                         title: 'Post Test (Esai)',
-                                        isDone: materi != 13 ? true : false,
+                                        isDone: materi != 15 ? true : false,
                                         press: () {
                                           Navigator.push(
                                             context,
@@ -440,10 +440,10 @@ class _MenuState extends State<Menu> {
                                           );
                                         },
                                       ),
-                                    if (materi > 13)
+                                    if (materi > 15)
                                       MateriMenu(
                                         title: 'Post Test (Sikap)',
-                                        isDone: materi != 14 ? true : false,
+                                        isDone: materi != 16 ? true : false,
                                         press: () {
                                           Navigator.push(
                                             context,
@@ -454,10 +454,10 @@ class _MenuState extends State<Menu> {
                                           );
                                         },
                                       ),
-                                    if (materi > 14)
+                                    if (materi > 16)
                                       MateriMenu(
                                         title: 'Post Test (Prilaku)',
-                                        isDone: materi != 15 ? true : false,
+                                        isDone: materi != 17 ? true : false,
                                         press: () {
                                           Navigator.push(
                                             context,
@@ -468,10 +468,10 @@ class _MenuState extends State<Menu> {
                                           );
                                         },
                                       ),
-                                    if (materi > 15)
+                                    if (materi > 17)
                                       MateriMenu(
                                         title: 'Hasil',
-                                        isDone: materi != 16 ? true : false,
+                                        isDone: materi != 18 ? true : false,
                                         press: () {
                                           Navigator.push(
                                             context,
