@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:stunting/models/zscore.dart';
+import 'package:stunting/pages/menu.dart';
 import 'package:stunting/theme/color.dart';
 import 'package:stunting/theme/font.dart';
 import 'package:stunting/widgets/button.dart';
@@ -97,7 +98,8 @@ class _CalculatorState extends State<Calculator> {
             Icons.arrow_back,
           ),
           onPressed: () {
-            Navigator.pop(context);
+            Navigator.pushReplacement(
+                context, MaterialPageRoute(builder: (context) => const Menu()));
           },
         ),
         backgroundColor: backgroundColor,
@@ -320,6 +322,7 @@ class _CalculatorState extends State<Calculator> {
                       context,
                       MaterialPageRoute(
                         builder: (context) => HasilCal(
+                          isMale: isMale,
                           rate: rate!,
                           umurbulan: umurbulan!,
                           umurtahun: umurtahun!,
