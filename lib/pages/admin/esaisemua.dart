@@ -276,6 +276,7 @@ class EsaiSemua extends StatelessWidget {
                                             text: 'Submit',
                                             press: () async {
                                               await AuthServices.HasilTestEsai(
+                                                      data['id'],
                                                       int.parse(_esai1Controller
                                                               .text) +
                                                           int.parse(

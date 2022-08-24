@@ -97,11 +97,12 @@ class AuthServices {
   }
 
   static Future<User?> HasilTestEsai(
+    String id,
     int pretest,
     int postest,
   ) async {
     try {
-      await FirebaseFirestore.instance.collection('user').doc(user.uid).update({
+      await FirebaseFirestore.instance.collection('user').doc(id).update({
         'score pretest esai': pretest,
         'score postest esai': postest,
       });
