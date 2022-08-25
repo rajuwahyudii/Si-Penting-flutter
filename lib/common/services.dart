@@ -84,6 +84,18 @@ class AuthServices {
     }
   }
 
+  static Future<User?> IsNew(
+    bool intro,
+  ) async {
+    try {
+      await FirebaseFirestore.instance.collection('user').doc(user.uid).update({
+        'new': intro,
+      });
+    } catch (e) {
+      print(e);
+    }
+  }
+
   static Future<User?> HasilPretestPrilaku(
     int score,
   ) async {
