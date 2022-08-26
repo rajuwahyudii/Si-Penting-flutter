@@ -105,7 +105,7 @@ class _RegisterState extends State<Register> {
                     // ignore: use_build_context_synchronously
                     await Navigator.of(context).pushReplacement(
                       MaterialPageRoute(
-                        builder: (context) => Wrapper(),
+                        builder: (context) => const Wrapper(),
                       ),
                     );
                   },

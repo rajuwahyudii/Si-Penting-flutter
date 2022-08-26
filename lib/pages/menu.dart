@@ -73,7 +73,7 @@ class _MenuState extends State<Menu> {
           var role = '${data['role']}';
           var materi = int.parse('${data['class']}');
           return data['new'] == true
-              ? Introduction()
+              ? const Introduction()
               : Scaffold(
                   backgroundColor: backgroundColor,
                   appBar: AppBar(
@@ -102,7 +102,7 @@ class _MenuState extends State<Menu> {
                         await Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => Wrapper(),
+                            builder: (context) => const Wrapper(),
                           ),
                         );
                       },

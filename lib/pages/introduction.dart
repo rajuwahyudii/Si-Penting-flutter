@@ -4,7 +4,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:stunting/common/services.dart';
 import 'package:stunting/pages/wrapper.dart';
 import 'package:stunting/theme/color.dart';
@@ -118,7 +117,7 @@ class _IntroductionState extends State<Introduction> {
             color: backgroundColor,
             child: SingleChildScrollView(
               child: Column(
-                children: <Widget>[],
+                children: const <Widget>[],
               ),
             ));
       },
