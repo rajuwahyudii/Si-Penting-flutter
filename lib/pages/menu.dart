@@ -15,7 +15,6 @@ import 'package:stunting/pages/menu-and-articles/articles/article2.dart';
 import 'package:stunting/pages/menu-and-articles/articles/article3.dart';
 import 'package:stunting/pages/menu-and-articles/articles/article4.dart';
 import 'package:stunting/pages/menu-and-articles/articles/article5.dart';
-import 'package:stunting/pages/menu-and-articles/articles/galeri.dart';
 import 'package:stunting/pages/menu-and-articles/materi/materi1.dart';
 import 'package:stunting/pages/menu-and-articles/materi/materi2.dart';
 import 'package:stunting/pages/menu-and-articles/materi/materi3.dart';
@@ -167,18 +166,6 @@ class _MenuState extends State<Menu> {
                             child: index == 2
                                 ? Column(
                                     children: <Widget>[
-                                      ArticleMenu(
-                                        title: 'Galeri Penelitian',
-                                        press: () {
-                                          Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                              builder: (context) =>
-                                                  const Galeri(),
-                                            ),
-                                          );
-                                        },
-                                      ),
                                       ArticleMenu(
                                         title:
                                             'Remaja Ternyata Memiliki Peran Penting dalam Mencegah Stunting',
