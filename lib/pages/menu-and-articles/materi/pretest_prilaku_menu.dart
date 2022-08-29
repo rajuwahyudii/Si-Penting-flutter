@@ -42,6 +42,7 @@ class _PretestPrilakuMenuState extends State<PretestPrilakuMenu> {
               leading: IconButton(
                 icon: const Icon(
                   Icons.arrow_back,
+                  color: Colors.black,
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -58,7 +59,7 @@ class _PretestPrilakuMenuState extends State<PretestPrilakuMenu> {
                 style: GoogleFonts.poppins(
                   fontSize: 23,
                   fontWeight: FontWeight.w600,
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
               ),
               centerTitle: true,
@@ -98,7 +99,7 @@ class _PretestPrilakuMenuState extends State<PretestPrilakuMenu> {
                             alignment: Alignment.centerRight,
                             child: Icon(
                               Icons.arrow_right_alt_outlined,
-                              color: Colors.white,
+                              color: Colors.black,
                               size: 50,
                             ),
                           ),
@@ -127,7 +128,7 @@ class _PretestPrilakuMenuState extends State<PretestPrilakuMenu> {
           color: backgroundColor,
           child: Center(
             child: LoadingAnimationWidget.waveDots(
-              color: Colors.white,
+              color: Colors.black,
               size: 50,
             ),
           ),

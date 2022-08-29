@@ -96,6 +96,7 @@ class _CalculatorState extends State<Calculator> {
         leading: IconButton(
           icon: const Icon(
             Icons.arrow_back,
+            color: Colors.black,
           ),
           onPressed: () {
             Navigator.pushReplacement(
@@ -108,7 +109,7 @@ class _CalculatorState extends State<Calculator> {
           style: GoogleFonts.poppins(
             fontSize: 23,
             fontWeight: FontWeight.w600,
-            color: Colors.white,
+            color: Colors.black,
           ),
         ),
         centerTitle: true,
@@ -133,7 +134,7 @@ class _CalculatorState extends State<Calculator> {
                   style: GoogleFonts.poppins(
                     fontWeight: FontWeight.w600,
                     fontSize: 16,
-                    color: Colors.white,
+                    color: Colors.black,
                   ),
                 ),
                 Container(
@@ -233,7 +234,7 @@ class _CalculatorState extends State<Calculator> {
                     style: GoogleFonts.poppins(
                       fontWeight: FontWeight.w600,
                       fontSize: 16,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                   ),
                 ),
@@ -255,7 +256,7 @@ class _CalculatorState extends State<Calculator> {
                           Text(
                             'Laki-laki',
                             style: GoogleFonts.poppins(
-                              color: Colors.white,
+                              color: Colors.black,
                               fontSize: 17,
                             ),
                           )
@@ -275,7 +276,7 @@ class _CalculatorState extends State<Calculator> {
                           Text(
                             'Perempuan',
                             style: GoogleFonts.poppins(
-                              color: Colors.white,
+                              color: Colors.black,
                               fontSize: 17,
                             ),
                           )

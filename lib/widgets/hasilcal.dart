@@ -28,6 +28,7 @@ class HasilCal extends StatelessWidget {
         leading: IconButton(
           icon: const Icon(
             Icons.arrow_back,
+            color: Colors.black,
           ),
           onPressed: () {
             Navigator.pushReplacement(
@@ -44,7 +45,7 @@ class HasilCal extends StatelessWidget {
           style: GoogleFonts.poppins(
             fontSize: 23,
             fontWeight: FontWeight.w600,
-            color: Colors.white,
+            color: Colors.black,
           ),
         ),
         centerTitle: true,
@@ -63,7 +64,7 @@ class HasilCal extends StatelessWidget {
                   style: GoogleFonts.poppins(
                     fontSize: 18,
                     fontWeight: FontWeight.w600,
-                    color: Colors.white,
+                    color: Colors.black,
                   ),
                 ),
               ),
@@ -76,7 +77,7 @@ class HasilCal extends StatelessWidget {
                   style: GoogleFonts.poppins(
                     fontSize: 18,
                     fontWeight: FontWeight.w600,
-                    color: Colors.white,
+                    color: Colors.black,
                   ),
                 ),
               ),
@@ -89,7 +90,7 @@ class HasilCal extends StatelessWidget {
                   style: GoogleFonts.poppins(
                     fontSize: 18,
                     fontWeight: FontWeight.w600,
-                    color: Colors.white,
+                    color: Colors.black,
                   ),
                 ),
               ),
@@ -110,7 +111,7 @@ class HasilCal extends StatelessWidget {
                   style: GoogleFonts.poppins(
                     fontSize: 20,
                     fontWeight: FontWeight.w400,
-                    color: Colors.white,
+                    color: Colors.black,
                   ),
                 ),
               ),
@@ -124,7 +125,7 @@ class HasilCal extends StatelessWidget {
                   style: GoogleFonts.poppins(
                     fontSize: 20,
                     fontWeight: FontWeight.w600,
-                    color: Colors.white,
+                    color: Colors.black,
                   ),
                 ),
               ),

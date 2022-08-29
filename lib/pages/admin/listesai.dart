@@ -27,10 +27,12 @@ class _ListEsaiState extends State<ListEsai> {
             },
             icon: const Icon(
               Icons.arrow_back,
+              color: Colors.black,
             ),
           ),
           centerTitle: true,
-          title: const Text('List Hasil'),
+          title: Text('List Hasil',
+              style: GoogleFonts.poppins(color: Colors.black)),
         ),
         body: StreamBuilder<QuerySnapshot>(
           stream: FirebaseFirestore.instance.collection('user').snapshots(),

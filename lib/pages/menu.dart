@@ -80,6 +80,7 @@ class _MenuState extends State<Menu> {
                     leading: IconButton(
                       icon: const Icon(
                         Icons.logout_outlined,
+                        color: Colors.black,
                       ),
                       onPressed: () async {
                         await AuthServices.signOut()
@@ -122,7 +123,7 @@ class _MenuState extends State<Menu> {
                               icon: const Icon(
                                 Icons.admin_panel_settings,
                                 size: 30,
-                                color: Colors.white,
+                                color: Colors.black,
                               ),
                             )
                           : const Text('')
@@ -136,7 +137,7 @@ class _MenuState extends State<Menu> {
                       style: GoogleFonts.poppins(
                         fontSize: 23,
                         fontWeight: FontWeight.w600,
-                        color: Colors.white,
+                        color: Colors.black,
                       ),
                     ),
                     centerTitle: true,

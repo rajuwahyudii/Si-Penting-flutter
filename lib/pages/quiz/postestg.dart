@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:stunting/common/services.dart';
 import 'package:stunting/models/pretest_ganda.dart';
 import 'package:stunting/pages/menu.dart';
+import 'package:stunting/theme/color.dart';
 import 'package:stunting/widgets/finished.dart';
 import 'package:stunting/widgets/quiz2.dart';
 
@@ -34,7 +35,7 @@ class _PostestGState extends State<PostestG> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: const Color.fromARGB(255, 46, 143, 228),
+        backgroundColor: backgroundColor,
         body: isFinish == false
             ? Quiz(
                 index: _index,

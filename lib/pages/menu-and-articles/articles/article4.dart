@@ -29,7 +29,7 @@ class Article4 extends StatelessWidget {
           style: GoogleFonts.poppins(
             fontSize: 23,
             fontWeight: FontWeight.w600,
-            color: Colors.white,
+            color: Colors.black,
           ),
         ),
         centerTitle: true,

@@ -20,18 +20,21 @@ class _ListScoreState extends State<ListScore> {
     return Scaffold(
         backgroundColor: backgroundColor,
         appBar: AppBar(
-          backgroundColor: backgroundColor,
-          leading: IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            icon: const Icon(
-              Icons.arrow_back,
+            backgroundColor: backgroundColor,
+            leading: IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: const Icon(
+                Icons.arrow_back,
+                color: Colors.black,
+              ),
             ),
-          ),
-          centerTitle: true,
-          title: const Text('List Hasil'),
-        ),
+            centerTitle: true,
+            title: Text(
+              'List Hasil',
+              style: GoogleFonts.poppins(color: Colors.black),
+            )),
         body: StreamBuilder<QuerySnapshot>(
           stream: FirebaseFirestore.instance.collection('user').snapshots(),
           builder: (context, snapshot) {

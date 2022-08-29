@@ -39,6 +39,7 @@ class _Materi2State extends State<Materi2> {
               leading: IconButton(
                 icon: const Icon(
                   Icons.arrow_back,
+                  color: Colors.black,
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -55,7 +56,7 @@ class _Materi2State extends State<Materi2> {
                 style: GoogleFonts.poppins(
                   fontSize: 23,
                   fontWeight: FontWeight.w600,
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
               ),
               centerTitle: true,

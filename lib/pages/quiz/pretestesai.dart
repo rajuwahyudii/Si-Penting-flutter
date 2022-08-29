@@ -24,7 +24,7 @@ class _PretestEsaiState extends State<PretestEsai> {
     Size size = MediaQuery.of(context).size;
     return SafeArea(
       child: Scaffold(
-          backgroundColor: const Color.fromARGB(255, 46, 143, 228),
+          backgroundColor: backgroundColor,
           body: Container(
             margin: const EdgeInsets.all(20),
             child: SingleChildScrollView(
@@ -42,7 +42,7 @@ class _PretestEsaiState extends State<PretestEsai> {
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                       fontSize: 20,
-                                      color: Colors.white,
+                                      color: Colors.black,
                                       fontWeight: FontWeight.w300),
                                 )
                               : const Text(
@@ -55,7 +55,7 @@ class _PretestEsaiState extends State<PretestEsai> {
                                 ),
                         ),
                         decoration: BoxDecoration(
-                          color: const Color(0xF62975D0),
+                          color: const Color.fromARGB(246, 123, 144, 19),
                           borderRadius: BorderRadius.circular(
                             20,
                           ),
@@ -75,7 +75,7 @@ class _PretestEsaiState extends State<PretestEsai> {
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(17),
                           ),
-                          fillColor: Colors.white70,
+                          fillColor: Colors.white,
                           filled: true,
                         ),
                       ),

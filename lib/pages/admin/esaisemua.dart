@@ -42,6 +42,7 @@ class EsaiSemua extends StatelessWidget {
               leading: IconButton(
                 icon: const Icon(
                   Icons.arrow_back,
+                  color: Colors.black,
                 ),
                 onPressed: () {
                   Navigator.pop(context);
@@ -53,7 +54,7 @@ class EsaiSemua extends StatelessWidget {
                 style: GoogleFonts.poppins(
                   fontSize: 23,
                   fontWeight: FontWeight.w600,
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
               ),
               centerTitle: true,

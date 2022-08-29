@@ -45,7 +45,7 @@ class FinishScreen extends StatelessWidget {
               style: const TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.w500,
-                color: Colors.white,
+                color: Colors.black,
               ),
             ),
           ),
@@ -61,7 +61,7 @@ class FinishScreen extends StatelessWidget {
               style: const TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.w400,
-                color: Colors.white,
+                color: Colors.black,
               ),
             ),
           ),

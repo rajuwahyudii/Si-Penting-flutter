@@ -41,6 +41,7 @@ class _PostestGMenuState extends State<PostestGMenu> {
               leading: IconButton(
                 icon: const Icon(
                   Icons.arrow_back,
+                  color: Colors.black,
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -57,7 +58,7 @@ class _PostestGMenuState extends State<PostestGMenu> {
                 style: GoogleFonts.poppins(
                   fontSize: 23,
                   fontWeight: FontWeight.w600,
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
               ),
               centerTitle: true,
@@ -99,7 +100,7 @@ class _PostestGMenuState extends State<PostestGMenu> {
           color: backgroundColor,
           child: Center(
             child: LoadingAnimationWidget.waveDots(
-              color: Colors.white,
+              color: Colors.black,
               size: 50,
             ),
           ),

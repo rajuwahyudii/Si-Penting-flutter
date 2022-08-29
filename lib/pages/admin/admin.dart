@@ -23,6 +23,7 @@ class _AdminPageState extends State<AdminPage> {
         leading: IconButton(
           icon: const Icon(
             Icons.arrow_back,
+            color: Colors.black,
           ),
           onPressed: () {
             Navigator.push(
@@ -40,7 +41,7 @@ class _AdminPageState extends State<AdminPage> {
           style: GoogleFonts.poppins(
             fontSize: 23,
             fontWeight: FontWeight.w600,
-            color: Colors.white,
+            color: Colors.black,
           ),
         ),
       ),

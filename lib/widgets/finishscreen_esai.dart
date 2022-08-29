@@ -30,7 +30,7 @@ class FinishScreenEsai extends StatelessWidget {
               style: TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.w500,
-                color: Colors.white,
+                color: Colors.black,
               ),
             ),
           ),
@@ -49,7 +49,7 @@ class FinishScreenEsai extends StatelessWidget {
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.w400,
-                color: Colors.white,
+                color: Colors.black,
               ),
             ),
           ),

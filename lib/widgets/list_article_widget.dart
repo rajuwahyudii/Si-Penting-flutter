@@ -20,7 +20,7 @@ class ListArticleWidget extends StatelessWidget {
           style: GoogleFonts.poppins(
             fontSize: 15,
             fontWeight: FontWeight.w400,
-            color: Colors.white,
+            color: Colors.black,
           ),
         ),
         Container(
@@ -34,7 +34,7 @@ class ListArticleWidget extends StatelessWidget {
             style: GoogleFonts.poppins(
               fontSize: 15,
               fontWeight: FontWeight.w400,
-              color: Colors.white,
+              color: Colors.black,
             ),
             textAlign: TextAlign.justify,
           ),

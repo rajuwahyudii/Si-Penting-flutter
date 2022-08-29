@@ -45,6 +45,7 @@ class _MateriTambahanState extends State<MateriTambahan> {
               leading: IconButton(
                 icon: const Icon(
                   Icons.arrow_back,
+                  color: Colors.black,
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -61,7 +62,7 @@ class _MateriTambahanState extends State<MateriTambahan> {
                 style: GoogleFonts.poppins(
                   fontSize: 23,
                   fontWeight: FontWeight.w600,
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
               ),
               centerTitle: true,

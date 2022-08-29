@@ -24,7 +24,7 @@ class IntroductionTest extends StatelessWidget {
             introduction,
             style: GoogleFonts.poppins(
               fontSize: 18,
-              color: Colors.white,
+              color: Colors.black,
               fontWeight: FontWeight.w400,
             ),
             textAlign: TextAlign.justify,

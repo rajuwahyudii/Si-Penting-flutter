@@ -26,7 +26,7 @@ class HaveAccount extends StatelessWidget {
             style: GoogleFonts.poppins(
               fontSize: 14,
               fontWeight: FontWeight.w600,
-              color: Colors.white,
+              color: Colors.black,
             ),
           ),
           TextButton(

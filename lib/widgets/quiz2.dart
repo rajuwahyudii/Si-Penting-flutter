@@ -35,7 +35,7 @@ class Quiz extends StatelessWidget {
             ),
           ),
           decoration: BoxDecoration(
-            color: Color(0xF62975D0),
+            color: Color.fromARGB(246, 123, 144, 19),
             borderRadius: BorderRadius.circular(
               20,
             ),

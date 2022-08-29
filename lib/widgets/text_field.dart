@@ -29,7 +29,7 @@ class InputButtonWidget extends StatelessWidget {
             style: GoogleFonts.poppins(
               fontWeight: FontWeight.w600,
               fontSize: 16,
-              color: Colors.white,
+              color: Colors.black,
             ),
           ),
           TextFormField(
