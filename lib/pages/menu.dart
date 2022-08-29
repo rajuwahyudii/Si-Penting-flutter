@@ -514,7 +514,7 @@ class _MenuState extends State<Menu> {
                     ),
                   ),
                   bottomNavigationBar: Container(
-                    color: buttonBlueColor,
+                    color: redColor,
                     width: size.width,
                     height: 70,
                     child: Row(
@@ -634,7 +634,7 @@ class _MenuState extends State<Menu> {
                 );
         }
         return Container(
-          color: backgroundColor,
+          color: redColor,
           child: Center(
             child: LoadingAnimationWidget.waveDots(
               color: Colors.white,

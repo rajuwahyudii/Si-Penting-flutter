@@ -18,7 +18,7 @@ class TitleArticelWidget extends StatelessWidget {
         style: GoogleFonts.poppins(
           fontSize: 20,
           fontWeight: FontWeight.w600,
-          color: Colors.white,
+          color: Colors.black,
         ),
         textAlign: TextAlign.center,
       ),

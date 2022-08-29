@@ -19,7 +19,7 @@ class SubtitleArtikelWidget extends StatelessWidget {
         style: GoogleFonts.poppins(
           fontSize: 18,
           fontWeight: FontWeight.w500,
-          color: Colors.white,
+          color: Colors.black,
         ),
         textAlign: TextAlign.start,
       ),

@@ -16,6 +16,7 @@ class Article3 extends StatelessWidget {
         leading: IconButton(
           icon: const Icon(
             Icons.arrow_back,
+            color: Colors.black,
           ),
           onPressed: () {
             Navigator.pop(context);
@@ -27,7 +28,7 @@ class Article3 extends StatelessWidget {
           style: GoogleFonts.poppins(
             fontSize: 23,
             fontWeight: FontWeight.w600,
-            color: Colors.white,
+            color: Colors.black,
           ),
         ),
         centerTitle: true,
