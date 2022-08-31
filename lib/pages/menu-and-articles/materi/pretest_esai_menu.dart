@@ -76,7 +76,7 @@ class _PretestEsaiMenuState extends State<PretestEsaiMenu> {
                   if (materi < 3)
                     IntroductionTest(
                       introduction:
-                          'Pilihlah jawaban yang paling kamu anggap benar! Isilah secara jujur karena ini tidak akan mempengaruhi nilai kamu atau apapun. ini hanya untuk melihat gambaran pengetahuan kamu sebelum terpapar dengan materi di dalam aplikasi.',
+                          'Isilah pertanyaan dengan jawaban yang menurutmu benar',
                     ),
                   if (materi < 3)
                     EndOfMateri(

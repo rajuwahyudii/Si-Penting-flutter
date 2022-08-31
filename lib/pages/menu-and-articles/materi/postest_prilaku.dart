@@ -9,6 +9,7 @@ import 'package:stunting/theme/color.dart';
 import 'package:stunting/widgets/done_test.dart';
 import 'package:stunting/widgets/end_of_materi.dart';
 import 'package:stunting/widgets/introduction_test.dart';
+import 'package:stunting/widgets/list_article_widget.dart';
 
 class PostestPrilakuMenu extends StatefulWidget {
   const PostestPrilakuMenu({Key? key}) : super(key: key);
@@ -74,9 +75,36 @@ class _PostestPrilakuMenuState extends State<PostestPrilakuMenu> {
                         introduction:
                             'Kamu Telah Menyelesaikan\n Postest Pilihan Prilaku'),
                   if (materi < 18)
-                    IntroductionTest(
-                      introduction:
-                          'Pilihlah jawaban yang paling kamu anggap benar! Isilah secara jujur karena ini tidak akan mempengaruhi nilai kamu atau apapun. ini hanya untuk melihat gambaran pengetahuan kamu sebelum terpapar dengan materi di dalam aplikasi.',
+                    Column(
+                      children: [
+                        IntroductionTest(
+                          introduction:
+                              'Tandailah sesuai dengan prilaku kamu terhadap setiap pernyataan. Isilah dengan jujur Keterangan:',
+                        ),
+                        const ListArticleWidget(
+                          text: '1 = Selalu',
+                        ),
+                        const ListArticleWidget(
+                          text: '2 = Sering',
+                        ),
+                        const ListArticleWidget(
+                          text: '3 =  Jarang',
+                        ),
+                        const ListArticleWidget(
+                          text: '4 = Tidak Pernah',
+                        ),
+                        const SizedBox(
+                          height: 50,
+                          child: Align(
+                            alignment: Alignment.centerRight,
+                            child: Icon(
+                              Icons.arrow_right_alt_outlined,
+                              color: Colors.black,
+                              size: 50,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   if (materi < 18)
                     EndOfMateri(

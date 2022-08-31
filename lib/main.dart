@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:stunting/common/services.dart';
 import 'package:stunting/pages/splash.dart';
+import 'package:stunting/pages/wrapper.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
           appBarTheme: const AppBarTheme(elevation: 0),
         ),
         debugShowCheckedModeBanner: false,
-        home: const SplashScreen(),
+        home: const Wrapper(),
       ),
     );
   }
