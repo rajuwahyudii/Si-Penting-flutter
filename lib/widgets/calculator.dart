@@ -322,13 +322,19 @@ class _CalculatorState extends State<Calculator> {
                     await Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => HasilCal(
-                          isMale: isMale,
-                          rate: rate!,
-                          umurbulan: umurbulan!,
-                          umurtahun: umurtahun!,
-                          imt: imt!,
-                        ),
+                        builder: (context) => rate != null
+                            ? HasilCal(
+                                isMale: isMale,
+                                rate: rate!,
+                                umurbulan: umurbulan!,
+                                umurtahun: umurtahun!,
+                                imt: imt!,
+                              )
+                            : HasilCal(
+                                isMale: isMale,
+                                imt: imt!,
+                                umurtahun: umurtahun!,
+                                umurbulan: umurbulan!),
                       ),
                     );
                   } catch (e) {

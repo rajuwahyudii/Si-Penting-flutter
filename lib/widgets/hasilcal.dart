@@ -9,11 +9,11 @@ class HasilCal extends StatelessWidget {
   int umurtahun;
   int umurbulan;
   double imt;
-  int rate;
+  int? rate;
   int isMale;
   HasilCal({
     required this.isMale,
-    required this.rate,
+    this.rate,
     required this.imt,
     required this.umurtahun,
     required this.umurbulan,
