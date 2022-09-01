@@ -136,7 +136,7 @@ class _MenuState extends State<Menu> {
                     ],
                     title: Text(
                       index == 1
-                          ? user.uid
+                          ? "Menu"
                           : index == 2
                               ? 'Artikel'
                               : 'Kalkulator Gizi',

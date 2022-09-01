@@ -30,18 +30,18 @@ class AuthServices {
 
   static Future<User?> signUp(
       String email, String password, String nama) async {
-    // FirebaseAuth auth = FirebaseAuth.instance;
-    // User idreg = auth.currentUser!;
     try {
+      FirebaseAuth auth = FirebaseAuth.instance;
       UserCredential result = await auth.createUserWithEmailAndPassword(
           email: email, password: password);
+      User idreg = auth.currentUser!;
 
       User? firebaseUser = result.user;
       await FirebaseFirestore.instance
           .collection('user')
-          .doc(user.uid)
+          .doc(idreg.uid)
           .set({
-            "id": user.uid,
+            "id": idreg.uid,
             "new": true,
             "role": "user",
             "nama": nama,
