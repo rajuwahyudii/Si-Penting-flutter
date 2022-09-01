@@ -25,6 +25,11 @@ class _IntroductionState extends State<Introduction> {
       FirebaseFirestore.instance.collection('user');
 
   @override
+  void initState() {
+    super.initState();
+    user = auth.currentUser!;
+  }
+
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
@@ -51,7 +56,7 @@ class _IntroductionState extends State<Introduction> {
                       1,
                       20,
                       child: Text(
-                        'Selamat Datang di \nSiPenting',
+                        'Selamat Datang di \nSiPenting' + user.uid,
                         style: GoogleFonts.poppins(
                           color: Colors.white,
                           fontSize: 25,

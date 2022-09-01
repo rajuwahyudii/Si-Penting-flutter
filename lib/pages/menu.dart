@@ -60,7 +60,6 @@ class _MenuState extends State<Menu> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     user = auth.currentUser!;
   }

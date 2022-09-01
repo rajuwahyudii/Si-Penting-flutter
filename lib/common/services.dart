@@ -89,8 +89,13 @@ class AuthServices {
   static Future<User?> IsNew(
     bool intro,
   ) async {
+    FirebaseAuth auth = FirebaseAuth.instance;
     try {
-      await FirebaseFirestore.instance.collection('user').doc(user.uid).update({
+      User idreg = auth.currentUser!;
+      await FirebaseFirestore.instance
+          .collection('user')
+          .doc(idreg.uid)
+          .update({
         'new': intro,
       });
     } catch (e) {
