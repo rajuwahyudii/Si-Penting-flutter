@@ -59,6 +59,12 @@ class _MenuState extends State<Menu> {
   int bb = 0;
 
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    user = auth.currentUser!;
+  }
+
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
@@ -130,7 +136,7 @@ class _MenuState extends State<Menu> {
                     ],
                     title: Text(
                       index == 1
-                          ? 'Menu'
+                          ? user.uid
                           : index == 2
                               ? 'Artikel'
                               : 'Kalkulator Gizi',
