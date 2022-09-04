@@ -46,7 +46,6 @@ class _IntroductionState extends State<Introduction> {
           return Scaffold(
             backgroundColor: backgroundColor,
             body: SizedBox(
-                child: SingleChildScrollView(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
@@ -56,7 +55,7 @@ class _IntroductionState extends State<Introduction> {
                       1,
                       20,
                       child: Text(
-                        'Selamat Datang di \nSiPenting' + user.uid,
+                        'Selamat Datang di \nSiPenting',
                         style: GoogleFonts.poppins(
                           color: Colors.white,
                           fontSize: 25,
@@ -73,7 +72,7 @@ class _IntroductionState extends State<Introduction> {
                       child: Center(
                         child: Image.asset(
                           'assets/images/hello.png',
-                          width: 300,
+                          width: 200,
                         ),
                       ),
                     ),
@@ -113,9 +112,49 @@ class _IntroductionState extends State<Introduction> {
                       ),
                     ),
                   ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Disusun Oleh :',
+                          style: GoogleFonts.poppins(
+                            color: Colors.white,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        Text(
+                          '1. Ns. ANDRA SAFERI WIJAYA, M.Kep',
+                          style: GoogleFonts.poppins(
+                            color: Colors.white,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        Text(
+                          '2. Ns. RAHMA ANNISA, M. Kep',
+                          style: GoogleFonts.poppins(
+                            color: Colors.white,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        Text(
+                          'Poltekkes Kemenkes Bengkulu',
+                          style: GoogleFonts.poppins(
+                            color: Colors.white,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
-            )),
+            ),
           );
         }
         return Container(
