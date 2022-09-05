@@ -112,8 +112,7 @@ class _IntroductionState extends State<Introduction> {
                       ),
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20.0),
+                  Center(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
